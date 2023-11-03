@@ -440,7 +440,6 @@ const handleValidation = (field, value) => {
             <Select
               labelId="district-label"
               id="district"
-              required
               label="District"
               value={District}
               onChange={(e) => {
