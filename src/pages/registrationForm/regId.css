@@ -1,0 +1,49 @@
+/* styles.scss */
+
+.officialtable {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.datatableTitle h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.TextField {
+  margin-bottom: 10px;
+}
+
+.FormControl {
+  margin-bottom: 10px;
+}
+
+.Select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.RadioGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.FormControlLabel {
+  margin-right: 20px;
+}
+
+.Button {
+  margin-top: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.reg-button{
+  padding: 20px;
+}

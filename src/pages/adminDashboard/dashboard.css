@@ -1,0 +1,29 @@
+.admin{
+    display: flex;
+    width: 100%;
+
+    .adminContainer{
+        flex: 6;
+    }
+
+}
+
+
+.charts {
+    display: flexbox;
+    width: 400px;
+    height: 450px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+  }
+
+  .charts2 {
+    display: flexbox;
+    width: 400px;
+    height: 450px;
+    margin-top:  50px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+  }
