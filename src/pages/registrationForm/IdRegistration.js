@@ -443,7 +443,7 @@ const handleValidation = (field, value) => {
               label="District"
               value={District}
               onChange={(e) => {
-                setZone(e.target.value);
+                setDistrict(e.target.value);
                 handleValidation("District", e.target.value);
               }}
             >
