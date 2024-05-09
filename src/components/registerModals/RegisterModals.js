@@ -25,7 +25,7 @@ function RegisterModals({setOpenModal}) {
     }
 
     try{
-      const response = await fetch('http://localhost:8080/api/adminRoute/signup', {
+      const response = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/signup', {
                 method:'POST',
                 body:JSON.stringify(data),
                 headers: {

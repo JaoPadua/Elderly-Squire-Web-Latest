@@ -34,7 +34,7 @@ function ForgotAdminpass() {
             return; // Stop the function if the field is empty
         }
         try {
-            const response = await axios.post('http://localhost:8080/api/adminRoute/forgotAdminPass', { email });
+            const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/forgotAdminPass', { email });
 
             Swal.fire({
                 title: "Email Sent Successfully",

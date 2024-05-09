@@ -65,7 +65,7 @@ function AddDocumentsModals({setOpenModal}) {
     console.log("Data:", formData);
 
     try{
-          const response = await axios.post('http://localhost:8080/api/docsRoute',formData,{
+          const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute',formData,{
       
                 headers: {
                      'Content-Type': 'multipart/form-data',

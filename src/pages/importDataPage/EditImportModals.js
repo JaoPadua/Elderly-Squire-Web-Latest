@@ -31,7 +31,7 @@ function EditImportModals({setOpenModal, elderID}) {
   useEffect(() => {
     const fetchElderbyID = async () => {
         try {
-            const res = await fetch(`http://localhost:8080/api/importRoute/${elderID}`, {
+            const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/importRoute/${elderID}`, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
@@ -66,7 +66,7 @@ function EditImportModals({setOpenModal, elderID}) {
     }
 
     try{
-      const response = await fetch(`http://localhost:8080/api/importRoute/updateImport/${elderID}`, {
+      const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/importRoute/updateImport/${elderID}`, {
                 method:'PATCH',
                 body:JSON.stringify(updateData),
                 headers: {

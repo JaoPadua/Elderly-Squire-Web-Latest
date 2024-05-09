@@ -21,7 +21,7 @@ function ElderPortalDocuments() {
 
     useEffect(() => {
         const fetchDocuments = async() =>{
-          const res = await fetch('http://localhost:8080/api/docsRoute/')
+          const res = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute/')
           const data = await res.json()
           
           

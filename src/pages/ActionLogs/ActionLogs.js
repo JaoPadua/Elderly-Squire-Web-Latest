@@ -40,7 +40,7 @@ function Logs() {
 
   const fetchLogs = async (page) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/getLogs/Logs?page=${page}`,{
+      const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/getLogs/Logs?page=${page}`,{
         headers: {
           'Authorization': `Bearer ${user.token}`,
         }
@@ -89,7 +89,7 @@ function Logs() {
   const deleteLog = async(logsID) =>{
     try {
       
-      const response =await fetch(`http://localhost:8080/api/getLogs/deleteLogs/${logsID}`, {
+      const response =await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/getLogs/deleteLogs/${logsID}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${user.token}`,

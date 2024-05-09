@@ -31,7 +31,7 @@ function ForgotPassword() {
             return; 
         }
         try {
-          const response = await axios.post(`http://localhost:8080/api/elderPortal/forgotPassword`, { email });
+          const response = await axios.post(`https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/forgotPassword`, { email });
 
           Swal.fire({
             title: "Email Sent Successfully",
