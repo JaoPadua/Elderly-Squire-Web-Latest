@@ -45,7 +45,7 @@ function ForgotAdminpass() {
             setMessage(response.data.message)
             // Navigate to login after a successful operation
             setTimeout(() => {
-                navigate('/LoginDisplay');
+                navigate('/LoginAdmin');
             }, 2000);
         } catch (error) {
           if (error.response && error.response.status === 404) {
@@ -71,7 +71,7 @@ function ForgotAdminpass() {
     };*/
 
     const cancelButton =  ()=>{
-        navigate("/LoginDisplay")
+        navigate("/LoginAdmin")
     }
   
  return(
