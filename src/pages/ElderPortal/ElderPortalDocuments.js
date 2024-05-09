@@ -7,7 +7,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import './elderPortalDocument.css';
 import Footer from "../Footer/Footer";
 import Pagination from '@mui/material/Pagination';
-
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 function ElderPortalDocuments() {
     const [alignment, setAlignment] = React.useState('web');
@@ -15,13 +15,20 @@ function ElderPortalDocuments() {
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(10);
 
+
+    const { elderUser } = useAuthContext();
+
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     }
 
     useEffect(() => {
         const fetchDocuments = async() =>{
-          const res = await fetch('http://localhost:8080/api/docsRoute/')
+          const res = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute/',{
+            headers:{
+                'Authorization': `Bearer ${elderUser.token}`
+            }
+          })
           const data = await res.json()
           
           

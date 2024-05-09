@@ -20,7 +20,7 @@ function SmsModals({setOpenModal,userId}) {
     useEffect(() => {
         async function fetchUsers() {
           try {
-            const response = await fetch(`http://localhost:8080/api/usersRoute/${userId}`, {
+            const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/usersRoute/${userId}`, {
                 body:JSON.stringify(data),
                 headers: {
                     'Authorization': `Bearer ${user.token}`
@@ -51,7 +51,7 @@ function SmsModals({setOpenModal,userId}) {
     e.preventDefault()
 
     try{
-      const response = await fetch(`http://localhost:8080/api/smsRoute/sendSmS/${userID}`, {
+      const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/smsRoute/sendSmS/${userID}`, {
             method: 'POST',
             headers: {
           'Authorization': `Bearer ${user.token}`,

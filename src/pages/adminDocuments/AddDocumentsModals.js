@@ -17,7 +17,7 @@ function AddDocumentsModals({setOpenModal}) {
  
   const [err, setError]=useState('')
 
-  const {user} = useAuthContext
+  const {user} = useAuthContext();
 
 
 
@@ -62,14 +62,14 @@ function AddDocumentsModals({setOpenModal}) {
     formData.append('pdfDocuments', pdfDocuments);
 
     //console.log('url',docsURL)
-    console.log("Data:", formData);
+    //console.log("Data:", formData);
 
     try{
-          const response = await axios.post('http://localhost:8080/api/docsRoute',formData,{
+          const response = await axios.post(`https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute/createDocs`,formData,{
       
                 headers: {
                      'Content-Type': 'multipart/form-data',
-                    //'Authorization': `Bearer ${user.token}`,
+                    'Authorization': `Bearer ${user.token}`,
                 },
                 
             })
@@ -84,7 +84,7 @@ function AddDocumentsModals({setOpenModal}) {
                 title: "Add Documents Success",
                 icon: "success"
               });
-              //setOpenModal(false)
+              setOpenModal(false)
               //console.log("formdata", formData);
                //console.log('Response Data:', responseData);
               console.log('response',response);
@@ -102,15 +102,17 @@ function AddDocumentsModals({setOpenModal}) {
         } 
         catch (error){
           if (error.response) {
+            console.log("error",error)
             console.log('Server responded with:', error.response.data);
             console.log('Status code:', error.response.status);
             
           }
           Swal.fire({
             title: "Error Occured Try again later",
-            icon: "error"
+            icon: "warning"
           });
-          console.log('Server responded with:', error.response.data);
+          console.log("error",error)
+         console.log('Server responded with:', error.response.data);
             console.log('Status code:', error.response.status);
             
       }

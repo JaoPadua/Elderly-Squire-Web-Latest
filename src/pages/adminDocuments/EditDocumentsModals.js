@@ -24,7 +24,7 @@ function EditDocumentsModals ({setOpenEditModal, docsID}){
     useEffect(() => {   
         const fetchDocsbyID = async () => {
             try {
-                const res = await fetch(`http://localhost:8080/api/docsRoute/${docsID}`, {
+                const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute/${docsID}`, {
                     headers: {
                         'Authorization': `Bearer ${user.token}`
                     }
@@ -89,7 +89,7 @@ function EditDocumentsModals ({setOpenEditModal, docsID}){
         
 
       try {
-          const response = await axios.patch(`http://localhost:8080/api/docsRoute/updateDocs/${docsID}`,formData, {
+          const response = await axios.patch(`https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute/updateDocs/${docsID}`,formData, {
               headers: {
                   'Content-Type': 'multipart/form-data',
                   'Authorization': `Bearer ${user.token}`
@@ -100,8 +100,8 @@ function EditDocumentsModals ({setOpenEditModal, docsID}){
           if (response.status === 200) {
               // Handle success
               //console.log('Data updated successfully!', updatedData);
-              console.log("response",response)
-              console.log('pdf',selectedPDF)
+              //console.log("response",response)
+              //console.log('pdf',selectedPDF)
               Swal.fire({
                 title: "Update Success",
                 icon: "success"

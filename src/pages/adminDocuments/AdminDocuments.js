@@ -54,7 +54,7 @@ useEffect(() => {
     
 const fetchDocuments  = async (page) =>{
   try {
-    const res = await fetch(`http://localhost:8080/api/docsRoute/docs/?page=${page}`, {
+    const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute/docs/?page=${page}`, {
       headers: {
         'Authorization': `Bearer ${user.token}`,
       }
@@ -100,7 +100,7 @@ const handleSnackbarClose = (event, reason) => {
 
   const deleteDocuments =async (documentID) =>{
     try {
-      const response = await fetch(`http://localhost:8080/api/docsRoute/${documentID}`, {
+      const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute/${documentID}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${user.token}`,
