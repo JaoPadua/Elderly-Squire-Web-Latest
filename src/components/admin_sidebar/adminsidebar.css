@@ -1,0 +1,114 @@
+.sidebar{
+    flex: 1;
+    border-right: 0.5px solid rgb(230, 227, 227);
+    min-height: 100vh;
+    background-color: white;
+}
+
+
+
+.top{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+li{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+.logo{
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #0047AB;
+    flex: 1;
+    position: static;
+}
+
+.center{
+    padding-left: 10px;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.icons{
+    font-size: 18px;
+    color: #0047AB;
+}
+
+span{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: #000;
+}
+
+.titlesidebar{
+    font-size: 12px;
+    font-weight: 500;
+    color: #0047AB;
+    margin-top: 25px;
+    margin-bottom: 5px;
+
+}
+
+/* Styles for the logout button */
+.logout-button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #FF6F61; /* Complementary color to blue */
+    color: #fff; /* White text for better contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .logout-button:hover {
+    background-color: #FF4136; /* Darker shade for hover effect */
+  }
+  
+
+  .separator {
+    margin-top: 20px; /* Add space above the line */
+    border-bottom: 2px solid #ccc; /* Creates a line */
+    margin-bottom: 20px; /* Space below the line */
+}
+
+.user-info {
+    padding: 10px 0; /* Adds padding above and below the username */
+}
+
+
+
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: relative;
+      width: 100%; /* Make the sidebar full width on smaller screens */
+      order: 1; /* Change the order of the sidebar and main content on smaller screens */
+      flex: none; /* Disable flexing on smaller screens */
+    }
+  
+    .main-content {
+      order: 2; /* Change the order of the sidebar and main content on smaller screens */
+    }
+  }
+
+

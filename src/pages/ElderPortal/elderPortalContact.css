@@ -1,0 +1,20 @@
+.contactContainer {
+    display: flex;
+}
+
+ul {
+    margin-top: '20px';
+    margin-right: '300px';
+    align-items: center;
+}
+
+li {
+    align-items: center;
+}
+
+.footerWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

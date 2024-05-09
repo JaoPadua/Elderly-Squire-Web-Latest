@@ -1,0 +1,98 @@
+.modalBackgroundDetails {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainerDetails {
+  width: 1200px;
+  height: 700px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.modalContainerDetails .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modalContainerDetails .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.modalContainerDetails .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainerDetails .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 5px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+  
+  #cancelBtn {
+    background-color: crimson;
+  }
+
+  /* CSS for the table structure */
+  .table-containerDetails {
+    margin: 0px;
+  }
+  
+  .table-containerDetails table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-containerDetails th,
+  .table-containerDetails td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+
+  }
+  
+  .table-containerDetails thead {
+    background-color: #1a64bc;
+    color: #fff;
+  }
+  
+  .table-containerDetails th {
+    font-weight: bold;
+  }
+  

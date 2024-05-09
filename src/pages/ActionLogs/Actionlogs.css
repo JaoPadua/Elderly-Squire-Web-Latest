@@ -1,0 +1,66 @@
+/* news.css */
+
+.admin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.adminContainer {
+  flex: 1;
+}
+
+.actionlogs-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.activitytable-wrapper {
+  width: 50%;
+  padding-top: 20px; /* Adjust as needed */
+  overflow-x: auto;
+}
+
+.activitytable {
+  table-layout: auto;
+  border-collapse: collapse;
+  border-radius: 4px;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.activitytable thead {
+  background-color: #1a64bc;
+  color: #fff;
+}
+
+.activitytable th, .activitytable td {
+  padding: 10px;
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  white-space: normal; 
+  
+}
+
+.activitytable td {
+  border-top: 0.5px solid #ddd;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.activitytable tbody tr:hover {
+  background-color: #eee;
+}
+
+.delete-btn {
+  color: #e10d05;
+}
+.actions-button svg {
+  cursor: pointer;
+}

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.admin {
+  display: flex;
+  width: 100%;
+
+  .adminContainer {
+    flex: 6;
+  }
+}
+
+.table-wrapper {
+  width: 100%;
+  padding-top: 20px;
+  overflow-x: auto;
+
+}
+
+.table {
+  table-layout: auto;
+  border-collapse: collapse;
+  border-radius: 4px;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.table thead {
+  background-color: #1a64bc;
+  color: #fff;
+}
+
+.table th,
+.table td {
+  padding: 0.8rem;
+  padding-right: 1em;
+  text-align: center;
+
+}
+
+.table td {
+  border-top: 0.5px solid #ddd;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.table tbody tr:hover {
+  background-color: #eee;
+}
+
+.expand {
+  width: 100%;
+}
+
+.label {
+  border-radius: 3px;
+  padding: 0.3rem;
+  color: white;
+}
+
+.label-draft {
+  background-color: #777;
+}
+
+
+.label-error {
+  background-color: #d9534f;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.actions svg {
+  cursor: pointer;
+}
+
+.details svg {
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: #e10d05;
+}
+
+
+.expand {
+  text-align: center;
+}
+
+.details {
+  align-items: center;
+}
+
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginate {
+  padding: 20px;
+  display: flexbox;
+}
+
+.paginationBttns a {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid #2b2eff;
+  color: #2b2eff;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #2b2eff;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #2b2eff;
+}
+
+.paginationDisabled a {
+  color: black;
+  background-color: white;
+}
+
+.actions {
+  color: green
+}
+
+.details {
+  color: #2b2eff
+}
+
+.transparentBackground {
+  background-color: transparent !important;
+}
+
+/*.search-bar{
+ 
+}*/
+.Export {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}

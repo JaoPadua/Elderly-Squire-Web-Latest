@@ -1,0 +1,36 @@
+.documentContainer {
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+.documentContainer h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+
+.toggleButtonArea {
+    margin-top: 20px;
+}
+
+.tableFormat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.footerWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
