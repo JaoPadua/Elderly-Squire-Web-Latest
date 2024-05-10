@@ -55,7 +55,7 @@ function ForgotPassword() {
             Swal.fire({
                 title: "Error",
                 text: "An error occurred, please try again later.",
-                icon: "Warning"
+                icon: "warning"
             });
         }
       }
