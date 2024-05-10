@@ -8,7 +8,7 @@ import * as yup from 'yup';
 import axios from 'axios';
 
 
-axios.defaults.withCredentials = true;
+//axios.defaults.withCredentials = true;
 
 function ForgotAdminpass() {
 
@@ -38,11 +38,9 @@ function ForgotAdminpass() {
             return; 
         }
         try {
-            const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/forgotAdminPass', { email },{
-              withCredentials: true
-            });
+            const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/forgotAdminPass', { email });
 
-            Swal.fire({
+            Swal.fire({ 
                 title: "Email Sent Successfully",
                 text: "Please check your email to reset your password.",
                 icon: "success",
