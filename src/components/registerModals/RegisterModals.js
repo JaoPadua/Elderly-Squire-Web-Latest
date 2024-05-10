@@ -1,8 +1,13 @@
-import { TextField,Box,Button,Grid,Select,MenuItem,InputLabel,FormControl } from '@mui/material'
+import { TextField,Box,Button,Grid,Select,MenuItem,InputLabel,FormControl,InputAdornment,IconButton } from '@mui/material'
 import React from 'react'
 import { useState } from "react"
 import { useSignup } from '../../hooks/useSignup'
 import Swal from 'sweetalert2'
+
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+
+
 
 function RegisterModals({setOpenModal}) {
   const [firstName,setFirstName] = useState("")
@@ -13,6 +18,17 @@ function RegisterModals({setOpenModal}) {
   const {signup, error, isLoading} = useSignup()
   const [errorr,setError] = useState()
  
+  const [visible, setVisible] = useState(false);
+
+  const EndAdorment = ({visible,setVisible}) => {
+    return <InputAdornment position='end'>
+      <IconButton onClick={()=>setVisible(!visible)}>
+       {visible ?  <VisibilityOffIcon/> : <RemoveRedEyeIcon/>}
+      </IconButton>
+    </InputAdornment>
+};
+
+
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -127,7 +143,10 @@ function RegisterModals({setOpenModal}) {
                   fullWidth
                   name="password"
                   label="Password"
-                  type="password"
+                  type={visible ? "text" : "password"}
+                InputProps={{
+                      endAdornment: <EndAdorment visible={visible} setVisible={setVisible} />
+                       }}
                   id="password"
                   onChange={(e) => setPassword(e.target.value)} 
                   value={password}
@@ -143,7 +162,7 @@ function RegisterModals({setOpenModal}) {
               value={role}
             >
               <MenuItem value="User">User</MenuItem>
-              <MenuItem value="admin">Admin</MenuItem>
+              <MenuItem value="Admin">Admin</MenuItem>
             </Select>
           </FormControl>
 
