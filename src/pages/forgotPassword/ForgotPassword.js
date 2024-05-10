@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 import * as yup from 'yup';
 import axios from 'axios';
 
-axios.defaults.withCredentials = true;
+//axios.defaults.withCredentials = true;
 
 
 function ForgotPassword() {
@@ -35,7 +35,7 @@ function ForgotPassword() {
         }
         try {
           const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/forgotPassword', { email }, {
-            withCredentials: true
+            //withCredentials: true
         });
 
           Swal.fire({
