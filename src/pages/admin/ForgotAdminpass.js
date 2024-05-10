@@ -8,11 +8,15 @@ import * as yup from 'yup';
 import axios from 'axios';
 
 
+axios.defaults.withCredentials = true;
+
 function ForgotAdminpass() {
 
     const [email, setEmail] = useState('');
     const [message,setMessage] =useState('')
     const [emailError, setEmailError] = useState('');
+
+    
     const navigate = useNavigate();
   
 
@@ -31,10 +35,12 @@ function ForgotAdminpass() {
                 title: 'Validation Error',
                 text: 'Email is required.',
             });
-            return; // Stop the function if the field is empty
+            return; 
         }
         try {
-            const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/forgotAdminPass', { email });
+            const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/forgotAdminPass', { email },{
+              withCredentials: true
+            });
 
             Swal.fire({
                 title: "Email Sent Successfully",
