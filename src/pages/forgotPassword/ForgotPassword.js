@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 import * as yup from 'yup';
 import axios from 'axios';
 
-//axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 
 
 function ForgotPassword() {
@@ -34,19 +34,20 @@ function ForgotPassword() {
             return; 
         }
         try {
-          const response = await axios.post(`https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/forgotPassword`, { email });
+          const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/forgotPassword', { email }, {
+              withCredentials: true
+          });
 
           Swal.fire({
-            title: "Email Sent Successfully",
-            text: "Please check your email to reset your password.",
-            icon: "success",
-            timer: 2000
-        });
-        setMessage(response.data.message)
-        // Navigate to login after a successful operation
-        setTimeout(() => {
-            navigate('/ElderPortalLogin');
-        }, 2000);
+              title: "Email Sent Successfully",
+              text: "Please check your email to reset your password.",
+              icon: "success",
+              timer: 2000
+          });
+          setMessage(response.data.message);
+          setTimeout(() => {
+              navigate('/ElderPortalLogin');
+          }, 2000);
       } catch (error) {
           if (error.response && error.response.status === 404) {
               Swal.fire({
