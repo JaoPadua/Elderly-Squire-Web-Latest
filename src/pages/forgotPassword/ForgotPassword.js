@@ -42,6 +42,11 @@ function ForgotPassword() {
             icon: "success",
             timer: 2000
         });
+        setMessage(response.data.message)
+        // Navigate to login after a successful operation
+        setTimeout(() => {
+            navigate('/ElderPortalLogin');
+        }, 2000);
       } catch (error) {
           if (error.response && error.response.status === 404) {
               Swal.fire({
