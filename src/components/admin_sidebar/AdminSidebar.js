@@ -84,7 +84,7 @@ function AdminSidebar(){
                                 </li>
                             </Link>
 
-                            {user.role === 'admin' && (
+                            {user.role === 'Team Leader' && (
                             <>
                             <p className="titlesidebar">Management Tools</p>
                             <Link to="/RegisterAdmin" style={{ textDecoration: "none" }}>

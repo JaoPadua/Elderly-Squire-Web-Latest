@@ -17,7 +17,7 @@ const SelectStatus = ({label,name,control,errors}) => {
       required select label ={label}>
       <MenuItem value="Single">Single </MenuItem>
       <MenuItem value="Married">Married </MenuItem>
-      <MenuItem value="Widow">Widow</MenuItem>
+      <MenuItem value="Widowed">Widowed</MenuItem>
       <MenuItem value="Legal Separated">Legal Separated</MenuItem>
       </TextField>
         )}

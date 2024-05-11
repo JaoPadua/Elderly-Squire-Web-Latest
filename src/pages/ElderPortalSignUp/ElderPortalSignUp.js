@@ -108,11 +108,19 @@ import { useNavigate } from 'react-router-dom';
         } catch (error) {
           console.error('Registration failed:', error);
           // Notify user of failure
-          Swal.fire({
+          if (error.response && error.response.status === 409) {
+            Swal.fire({
+              title: "Registration Failed",
+              text: "Email already exists",
+              icon: "warning"
+            });
+          } else {
+            Swal.fire({
               title: "Registration Failed",
               text: `Error: ${error.message}`,
               icon: "error"
-          });
+            });
+          }
         }
 
       }
