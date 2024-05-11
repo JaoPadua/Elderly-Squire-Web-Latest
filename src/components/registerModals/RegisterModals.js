@@ -163,7 +163,7 @@ function RegisterModals({setOpenModal}) {
             >
               <MenuItem value="User">User</MenuItem>
               <MenuItem value="admin">Admin</MenuItem>
-              <MenuItem value="Team Leader">Team Leader</MenuItem>
+              <MenuItem value="TeamLeader">Team Leader</MenuItem>
             </Select>
           </FormControl>
 
