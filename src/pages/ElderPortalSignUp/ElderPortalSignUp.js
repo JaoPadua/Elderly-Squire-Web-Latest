@@ -112,7 +112,7 @@ import { useNavigate } from 'react-router-dom';
             Swal.fire({
               title: "Registration Failed",
               text: "Email already exists",
-              icon: "warning"
+              icon: ""
             });
           } else {
             Swal.fire({

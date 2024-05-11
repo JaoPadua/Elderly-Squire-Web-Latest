@@ -86,7 +86,7 @@ function App() {
             <Route path="/AdminElder" element={<AdminElderDisplay />} />
             <Route path="/PublishNews" element={<NewsDisplay />} />
 
-            {user.role === 'admin' && (
+            {user.role === 'TeamLeader' && (
               <>
                 <Route path="/RegisterAdmin" element={<AddAdminDisplay />} />
                 <Route path="/Documents" element={<AdminDocumentsDisplay />} />
