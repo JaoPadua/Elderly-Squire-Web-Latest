@@ -86,7 +86,7 @@ import { useNavigate } from 'react-router-dom';
 
           const response = await axios.post(`https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/ElderSignup`, formData, {  
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'multipart/form-data'
             }
           })
 
@@ -107,12 +107,15 @@ import { useNavigate } from 'react-router-dom';
 
         } catch (error) {
           console.error('Registration failed:', error);
+          // Log the status code and error message for debugging
+          console.log('Status code:', error.response.status);
+          console.log('Error message:', error.message);
           // Notify user of failure
-          if (error.response && error.response.status === 409) {
+          if (error.message === "Email already exists") {
             Swal.fire({
               title: "Registration Failed",
               text: "Email already exists",
-              icon: ""
+              icon: "warning" 
             });
           } else {
             Swal.fire({
