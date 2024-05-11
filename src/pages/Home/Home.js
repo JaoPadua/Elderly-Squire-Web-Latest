@@ -19,7 +19,6 @@ function Home() {
             <PageTwo />
             <AboutUs />
             <AppFaq />
-            <AppContact />
             <PageOne {...homeObjFour} />
             <Footer />
         </>

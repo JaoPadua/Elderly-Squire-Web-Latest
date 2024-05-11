@@ -7,7 +7,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import PersonIcon from '@mui/icons-material/Person';
 import NoteAddIcon from '@mui/icons-material/NoteAdd';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import DomainIcon from '@mui/icons-material/Domain';
+import DomainIcon from '@mui/icons-material/Domain';    
 //import { Button } from '@mui/material';
 import "./adminsidebar.css";
 import { BrowserRouter, Routes, Route, useNavigate,Link } from 'react-router-dom';
@@ -84,7 +84,7 @@ function AdminSidebar(){
                                 </li>
                             </Link>
 
-                            {user.role === 'Team Leader' && (
+                            {user.role === 'admin' && (
                             <>
                             <p className="titlesidebar">Management Tools</p>
                             <Link to="/RegisterAdmin" style={{ textDecoration: "none" }}>

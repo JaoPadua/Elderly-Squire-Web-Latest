@@ -161,7 +161,8 @@ function RegisterModals({setOpenModal}) {
               onChange={(e) => setRole(e.target.value)}
               value={role}
             >
-              <MenuItem value="Admin">Admin</MenuItem>
+              <MenuItem value="User">User</MenuItem>
+              <MenuItem value="admin">Admin</MenuItem>
               <MenuItem value="Team Leader">Team Leader</MenuItem>
             </Select>
           </FormControl>
