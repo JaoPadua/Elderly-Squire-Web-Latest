@@ -86,7 +86,7 @@ import { useNavigate } from 'react-router-dom';
 
           const response = await axios.post(`https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/ElderSignup`, formData, {  
             headers: {
-              'Content-Type': 'multipart/form-data'
+              'Content-Type': 'application/json'
             }
           })
 
