@@ -78,7 +78,7 @@ const changePage = (selectedPage) => {
   //get all pagination and queries
   const fetchElder = async (page) => {
     try {
-      const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/elderRoute/?page=${page}&search=${searchQuery}`, {
+      const res = await fetch(`https://capstone-project-api-backend.vercel.app/api/elderRoute/?page=${page}&search=${searchQuery}`, {
         headers: {
           'Authorization': `Bearer ${user.token}`,
         }
@@ -125,7 +125,7 @@ const changePage = (selectedPage) => {
   //deleting Elder
   const deleteElder = async (elderID) => {
     try {
-      const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/elderRoute/${elderID}`, {
+      const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/elderRoute/${elderID}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${user.token}`,

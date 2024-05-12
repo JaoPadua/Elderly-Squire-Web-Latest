@@ -36,7 +36,7 @@ function AddAdmin() {
         fetchAdmin()
       },[])
       const fetchAdmin = async() =>{
-        const res = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/getAdmin')
+        const res = await fetch('https://capstone-project-api-backend.vercel.app/api/adminRoute/getAdmin')
         const data = await res.json()
         
         //console.log(data);
@@ -55,7 +55,7 @@ function AddAdmin() {
       };
       const deleteAdmin = async (adminID) => {
         try {
-          const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/${adminID}`, {
+          const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/adminRoute/${adminID}`, {
             method: 'DELETE',
             headers: {
               'Authorization': `Bearer ${user.token}`,

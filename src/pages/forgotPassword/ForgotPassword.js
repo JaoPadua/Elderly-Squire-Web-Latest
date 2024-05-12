@@ -34,7 +34,7 @@ function ForgotPassword() {
             return; 
         }
         try {
-          const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/forgotPassword', { email });
+          const response = await axios.post('https://capstone-project-api-backend.vercel.app/api/elderPortal/forgotPassword', { email });
 
           Swal.fire({
               title: "Email Sent Successfully",

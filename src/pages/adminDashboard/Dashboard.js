@@ -31,7 +31,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/elderRoute/search', {
+        const res = await fetch('https://capstone-project-api-backend.vercel.app/api/elderRoute/search', {
           headers: {
             'Authorization': `Bearer ${user.token}`,
           },
@@ -64,7 +64,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchverifiedData = async () => {
       try {
-        const res = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/elderRoute/search', {
+        const res = await fetch('https://capstone-project-api-backend.vercel.app/api/elderRoute/search', {
           headers: {
             'Authorization': `Bearer ${user.token}`,
           },
@@ -96,7 +96,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchImportData = async () => {
       try {
-        const res = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/importRoute/getAll', {
+        const res = await fetch('https://capstone-project-api-backend.vercel.app/api/importRoute/getAll', {
           headers: {
             'Authorization': `Bearer ${user.token}`,
           },

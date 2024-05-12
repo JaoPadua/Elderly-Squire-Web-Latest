@@ -74,58 +74,53 @@ import { useNavigate } from 'react-router-dom';
     });
 
 
-    const onSubmit = async(data) =>{
+      const onSubmit = async(data) =>{
 
-        try {
-            const formData = new FormData();
-            formData.append('lastName',data.SurName)
-            formData.append('firstName',data.FirstName)
-            formData.append('email',data.email)
-            formData.append('password',data.password)
+          try {
+              const formData = new FormData();
+              formData.append('lastName',data.SurName)
+              formData.append('firstName',data.FirstName)
+              formData.append('email',data.email)
+              formData.append('password',data.password)
 
 
-          const response = await axios.post(`https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/ElderSignup`, formData, {  
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          })
-
-           if(response.status === 200){
-            Swal.fire({
-              title: "Register Success!",
-              icon: "success"
-
+            const response = await axios.post(`https://capstone-project-api-backend.vercel.app/api/elderPortal/ElderSignup`, formData, {  
+              headers: {
+                'Content-Type': 'application/json'
+              }
             })
-            console.log('Data',response)
-            reset()
-            navigate('/ElderPortalLogin')
-           }
-           
-           else{
-            throw new Error('Failed with status code: ' + response.status);
-           }
 
-        } catch (error) {
-          console.error('Registration failed:', error);
-          // Log the status code and error message for debugging
-          console.log('Status code:', error.response.status);
-          console.log('Error message:', error.message);
-          // Notify user of failure
-          if (error.message === "Email already exists") {
-            Swal.fire({
-              title: "Registration Failed",
-              text: "Email already exists",
-              icon: "warning" 
-            });
+            if(response.status === 200){
+              Swal.fire({
+                title: "Register Success!",
+                icon: "success"
+
+              })
+              console.log('Data',response)
+              reset()
+              navigate('/ElderPortalLogin')
+            }
+            
+            else{
+              throw new Error('Failed with status code: ' + response.status);
+            }
+
+          } catch (error) {
+            if (error.response && error.response.status === 409) {
+              Swal.fire({
+                  title: "Registration Failed",
+                  text: "Email already exists",
+                  icon: "warning" 
+              });
           } else {
-            Swal.fire({
-              title: "Registration Failed",
-              text: `Error: ${error.message}`,
-              icon: "error"
-            });
+              Swal.fire({
+                  title: "Registration Failed",
+                  text: `An error occurred, please try again later.`,
+                  icon: "warning"
+              });
           }
-        }
 
+        }
       }
     
 

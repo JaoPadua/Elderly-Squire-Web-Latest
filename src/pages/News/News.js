@@ -10,7 +10,7 @@ function News() {
    
     useEffect(() => {
         const fetchNews = async() =>{
-          const res = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/newsRoute/')
+          const res = await fetch('https://capstone-project-api-backend.vercel.app/api/newsRoute/')
           const data = await res.json()
           
           

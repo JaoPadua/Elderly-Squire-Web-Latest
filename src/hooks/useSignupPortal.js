@@ -10,7 +10,7 @@ export const useSignupPortal = () => {
     setIsLoading(true)
     setError(null)
 
-    const response = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/ElderSignup', {
+    const response = await fetch('https://capstone-project-api-backend.vercel.app/api/elderPortal/ElderSignup', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({firstName, lastName, email, password, role})

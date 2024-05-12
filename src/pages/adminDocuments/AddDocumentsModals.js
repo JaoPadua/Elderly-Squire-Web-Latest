@@ -65,7 +65,7 @@ function AddDocumentsModals({setOpenModal}) {
     //console.log("Data:", formData);
 
     try{
-          const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute/createDocs',formData,{
+          const response = await axios.post('https://capstone-project-api-backend.vercel.app/api/docsRoute/createDocs',formData,{
       
                 headers: {
                      'Content-Type': 'multipart/form-data',

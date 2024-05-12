@@ -181,7 +181,7 @@ FirstName: yup.string().required('First Name is Required')
       //console.log("formData:", formData);
 
 
-      const response = await axios.post(`https://teal-cape-buffalo-sock.cyclic.app/api/usersRoute/`, formData, {
+      const response = await axios.post(`https://capstone-project-api-backend.vercel.app/api/usersRoute/`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

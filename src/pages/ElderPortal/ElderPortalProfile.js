@@ -15,7 +15,7 @@ function ElderPortalProfile() {
         const fetchElderDetails = async () => {
             if (!elderUser.elderID) return; // Ensure there's an elder ID
             try {
-                const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/elderProfile/${elderUser.elderID}`, {
+                const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/elderPortal/elderProfile/${elderUser.elderID}`, {
                     headers: {
                         'Authorization': `Bearer ${elderUser.token}`
                     }

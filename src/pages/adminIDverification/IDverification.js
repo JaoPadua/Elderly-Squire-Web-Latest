@@ -94,7 +94,7 @@ function IDverification()  {
      }, [currentPage,searchQuery]);
     
        const fetchUsers = async(page,userID) =>{
-         const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/usersRoute/?page=${page}&search=${searchQuery}`, {
+         const res = await fetch(`https://capstone-project-api-backend.vercel.app/api/usersRoute/?page=${page}&search=${searchQuery}`, {
            headers: {
              'Authorization': `Bearer ${user.token}`,
            }
@@ -128,7 +128,7 @@ function IDverification()  {
   
   const deleteUser = async (userID) => {
     try {
-      const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/usersRoute/${userID}`, {
+      const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/usersRoute/${userID}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${user.token}`,
@@ -179,7 +179,7 @@ function IDverification()  {
     const moveElder =  async (userID) => {
     
       try{
-    const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/elderRoute/move-item/${userID}`, {
+    const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/elderRoute/move-item/${userID}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${user.token}`,
@@ -219,7 +219,7 @@ function IDverification()  {
     }
     const fetchUserData = async (userID) => {
       try {
-        const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/usersRoute/${userID}`, {
+        const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/usersRoute/${userID}`, {
           headers: {
             'Authorization': `Bearer ${user.token}`,
           }
@@ -261,7 +261,7 @@ function IDverification()  {
   
     const sendSMS = async(userID,messageText) =>{
       try{
-        const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/smsRoute/sendSmS/${userID}`, {
+        const res = await fetch(`https://capstone-project-api-backend.vercel.app/api/smsRoute/sendSmS/${userID}`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${user.token}`,
@@ -322,7 +322,7 @@ function IDverification()  {
 
     const sendSMSbulk = async(selectedRows,messageText) =>{
       try{
-        const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/smsRoute/sendToMany/${selectedRows}`, {
+        const res = await fetch(`https://capstone-project-api-backend.vercel.app/api/smsRoute/sendToMany/${selectedRows}`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${user.token}`,

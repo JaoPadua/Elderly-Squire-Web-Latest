@@ -59,7 +59,7 @@ import Swal from 'sweetalert2';
 
   const fetchElders = async(page) =>{
     try {
-      const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/importRoute/?page=${page}&search=${searchQuery}`, {
+      const res = await fetch(`https://capstone-project-api-backend.vercel.app/api/importRoute/?page=${page}&search=${searchQuery}`, {
         headers: {
           'Authorization': `Bearer ${user.token}`,
         }
@@ -137,7 +137,7 @@ const handleUpload = () => {
         formData.append('file', blob, file.name.replace(/\.[^/.]+$/, '.csv'));
 
         // Perform the file upload to the API
-        fetch('https://teal-cape-buffalo-sock.cyclic.app/api/importRoute/upload', {
+        fetch('https://capstone-project-api-backend.vercel.app/api/importRoute/upload', {
           method: 'POST',
           body: formData,
           headers: {
@@ -186,7 +186,7 @@ const handleUpload = () => {
     };
     const deleteElder = async (ImportDataID) => {
       try {
-        const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/importRoute/${ImportDataID}`, {
+        const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/importRoute/${ImportDataID}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${user.token}`,

@@ -53,7 +53,7 @@ function ResetPassword() {
       return;
   }
       try {
-        const response = await axios.post(`https://teal-cape-buffalo-sock.cyclic.app/api/elderPortal/reset-password/${id}/${token}`,{password});
+        const response = await axios.post(`https://capstone-project-api-backend.vercel.app/api/elderPortal/reset-password/${id}/${token}`,{password});
         setMessage(response.data.message); // Adjust according to what your backend sends
         console.log('data',response)
         Swal.fire({

@@ -17,7 +17,7 @@ function Modals({ setOpenModal,userId }) {
          // Replace with the actual user ID you want to fetch
     
         try {
-          const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/usersRoute/${userId}`, {
+          const res = await fetch(`https://capstone-project-api-backend.vercel.app/api/usersRoute/${userId}`, {
             headers: {
               'Authorization': `Bearer ${user.token}`
             }

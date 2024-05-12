@@ -24,7 +24,7 @@ function ElderPortalDocuments() {
 
     useEffect(() => {
         const fetchDocuments = async() =>{
-            const res = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/docsRoute/',{
+            const res = await fetch('https://capstone-project-api-backend.vercel.app/api/docsRoute/',{
                 headers:{
                     'Authorization': `Bearer ${elderUser.token}`
                 }

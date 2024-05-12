@@ -10,7 +10,7 @@ export const useSignup = () => {
     setIsLoading(true)
     setError(null)
 
-    const response = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/signup', {
+    const response = await fetch('https://capstone-project-api-backend.vercel.app/api/adminRoute/signup', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({firstName, lastName, email, password, role})

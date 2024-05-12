@@ -77,7 +77,7 @@ function NewsPublish() {
 
   //console.log('Request Data:', data);
   try {
-    const response = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/newsRoute/', {
+    const response = await fetch('https://capstone-project-api-backend.vercel.app/api/newsRoute/', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -132,7 +132,7 @@ const changePage = (selectedPage) => {
       //fetch news
       const fetchPaginatedNews = async(page) =>{
         try {
-          const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/newsRoute/News/?page=${page}`, {
+          const res = await fetch(`https://capstone-project-api-backend.vercel.app/api/newsRoute/News/?page=${page}`, {
             headers: {
               'Authorization': `Bearer ${user.token}`,
             }
@@ -169,7 +169,7 @@ const changePage = (selectedPage) => {
       };
       const deleteNews = async (newsID) => {
         try {
-          const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/newsRoute/${newsID}`, {
+          const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/newsRoute/${newsID}`, {
             method: 'DELETE',
             headers: {
               'Authorization': `Bearer ${user.token}`,

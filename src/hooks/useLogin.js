@@ -21,7 +21,7 @@ export const useLogin = () => {
         // Include the token in the headers
 
 
-    const response = await fetch('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/login', {
+    const response = await fetch('https://capstone-project-api-backend.vercel.app/api/adminRoute/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json', /*Authorization: `Bearer ${authToken}`*/},
       body: JSON.stringify({ email, password })

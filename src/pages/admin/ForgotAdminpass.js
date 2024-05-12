@@ -38,7 +38,7 @@ function ForgotAdminpass() {
             return; 
         }
         try {
-            const response = await axios.post('https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/forgotAdminPass', { email });
+            const response = await axios.post('https://capstone-project-api-backend.vercel.app/api/adminRoute/forgotAdminPass', { email });
 
             Swal.fire({ 
                 title: "Email Sent Successfully",

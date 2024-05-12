@@ -21,7 +21,7 @@ function EditNewsModals({ setOpenModal, newsId, setShowAddFormss }) {
     useEffect(() => {
         const fetchNewsById = async () => {
             try {
-                const res = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/newsRoute/${newsId}`, {
+                const res = await fetch(`https://capstone-project-api-backend.vercel.app/api/newsRoute/${newsId}`, {
                     headers: {
                         'Authorization': `Bearer ${user.token}`
                     }
@@ -56,7 +56,7 @@ function EditNewsModals({ setOpenModal, newsId, setShowAddFormss }) {
       };
   
       try {
-          const response = await fetch(`https://teal-cape-buffalo-sock.cyclic.app/api/newsRoute/${newsId}`, {
+          const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/newsRoute/${newsId}`, {
               method: 'PATCH',
               headers: {
                   'Content-Type': 'application/json',

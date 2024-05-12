@@ -55,7 +55,7 @@ function ResetAdminpass() {
       return;
   }*/
       try {
-        const response = await axios.post(`https://teal-cape-buffalo-sock.cyclic.app/api/adminRoute/reset-AdminPass/${id}/${token}`,{password});
+        const response = await axios.post(`https://capstone-project-api-backend.vercel.app/api/adminRoute/reset-AdminPass/${id}/${token}`,{password});
         setMessage(response.data.message); // Adjust according to what your backend sends
         console.log('data',response)
         Swal.fire({
