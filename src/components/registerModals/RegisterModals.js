@@ -29,60 +29,71 @@ function RegisterModals({setOpenModal}) {
 };
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const data = {
-      firstName:firstName,
-      lastName:lastName,
-      email:email,
-      password,
-      role,
-    }
+  const data = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    password,
+    role,
+  };
 
-    try{
-      const response = await fetch('https://capstone-project-api-backend.vercel.app/api/adminRoute/signup', {
-                method:'POST',
-                body:JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                
-            })
-            const json = await response.json()
-    
-          if (!response.ok) {
-            setError(json.error);
-            // Optionally, show an error message to the user
-            Swal.fire({
-              title: "All fields must be filled ",
-              icon: "warning"
-            });
-    
-          } else{
-            //console.log('New Users Addedd', json)
-            setFirstName('')
-            setLastName('')
-            setEmail('')
-            setPassword('')
-            setRole('')
-            Swal.fire({
-              title: "Add Admin Success",
-              icon: "success"
-            });
-          }
-          
-    
-        } 
-        catch (error){
-          console.error("Error adding new Admin:", error);
-          // Optionally, show an error message to the user
-          Swal.fire({
-            title: "Error please try again",
-            icon: "error"
-          });
-        }
+  try {
+    const response = await fetch(
+      'https://capstone-project-api-backend.vercel.app/api/adminRoute/signup',
+      {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
       }
+    );
+
+    if (!response.ok) {
+      const json = await response.json();
+      if (response.status === 409) {
+        setError(json.message); // Set specific error message for email already exists
+        Swal.fire({
+          title: 'Register Admin Failed',
+          text: 'Email already exists',
+          icon: 'warning',
+        });
+      } else {
+        setError('An error occurred, please try again later.');
+        Swal.fire({
+          title: 'Register Admin Failed',
+          text: 'An error occurred, please try again later.',
+          icon: 'warning',
+        });
+      }
+    } else {
+      // Successful registration
+      const json = await response.json();
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setPassword('');
+      setRole('');
+      Swal.fire({
+        title: 'Register Admin Success',
+        text: 'Add Admin Success',
+        icon: 'success',
+      });
+    }
+  } catch (error) {
+    // Network error or other unexpected errors
+    console.error('Error:', error);
+    setError('An error occurred, please try again later.');
+    Swal.fire({
+      title: 'Register Admin Failed',
+      text: 'An error occurred, please try again later.',
+      icon: 'warning',
+    });
+  }
+};
 
 
   
