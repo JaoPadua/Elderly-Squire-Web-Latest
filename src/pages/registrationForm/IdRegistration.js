@@ -73,7 +73,7 @@ FirstName: yup.string().required('First Name is Required')
     ValidIdPresented: yup.string().required('Valid ID is Required'),
     ProofOfValidID: yup.mixed().required('Proof of Valid ID is Required'),
     TypeofApplication: yup.string().required('Type of Applications is Required'),
-    privacy: yup.bool().oneOf([true], 'Field must be Checked'),
+    privacy: yup.bool().oneOf([true], 'You must read and agree to Privacy Policy'),
   });
 
 
@@ -128,7 +128,7 @@ FirstName: yup.string().required('First Name is Required')
   };
   
   const uploadFile = async (files) => {
-    console.log(files)
+    //console.log(files)
     try {
         //const upload_preset = "image_preset";
         const formData = new FormData();

@@ -55,7 +55,7 @@ import { useNavigate } from 'react-router-dom';
     email: yup.string().required('E-mail Address is required.').email('E-mail Address provided is invalid.').max(320),
     password: yup.string().required('Password is required.').min(8, 'Password must be at least 8 characters long.').max(15),
     confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Password must match'),
-    privacy: yup.bool().oneOf([true], 'Field must be Checked'),
+    privacy: yup.bool().oneOf([true], 'You must read and agree to Privacy Policy'),
   });
 
 
