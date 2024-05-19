@@ -106,7 +106,7 @@ function IDverification()  {
            throw new Error('Failed to fetch data');      
          }
          const data = await res.json();
-        //console.log('fetchData' ,data);
+        console.log('fetchData' ,data);
          setUsers(data.users);
          const totalPages = Math.ceil(data.totalUsers /10);
          //console.log('setUsers',data.users)
