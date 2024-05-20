@@ -34,7 +34,7 @@ function ResetAdminpass() {
 
     const handleResetPassword = async (e) => {
       e.preventDefault()
-      console.log("Submitting New Password:", password);
+      //console.log("Submitting New Password:", password);
 
       const trimmedPassword = password.trim();
 
@@ -57,7 +57,7 @@ function ResetAdminpass() {
       try {
         const response = await axios.post(`https://capstone-project-api-backend.vercel.app/api/adminRoute/reset-AdminPass/${id}/${token}`,{password});
         setMessage(response.data.message); // Adjust according to what your backend sends
-        console.log('data',response)
+        //console.log('data',response)
         Swal.fire({
           title:"Update Admin Password Success",
           icon: "success",

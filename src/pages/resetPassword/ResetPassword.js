@@ -33,7 +33,7 @@ function ResetPassword() {
 
     const handleResetPassword = async (e) => {
       e.preventDefault()
-      console.log("Submitting New Password:", password);
+      //console.log("Submitting New Password:", password);
 
       const trimmedPassword = password.trim();
       if (!trimmedPassword) {
@@ -55,7 +55,7 @@ function ResetPassword() {
       try {
         const response = await axios.post(`https://capstone-project-api-backend.vercel.app/api/elderPortal/reset-password/${id}/${token}`,{password});
         setMessage(response.data.message); // Adjust according to what your backend sends
-        console.log('data',response)
+        //console.log('data',response)
         Swal.fire({
           title:"Update Password Success",
           icon: "success",

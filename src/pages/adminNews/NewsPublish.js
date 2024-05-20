@@ -143,7 +143,7 @@ const changePage = (selectedPage) => {
           }
       
          const data = await res.json()
-          console.log('News', data);
+          //console.log('News', data);
           setNews(data.news);
           const pageCount = Math.ceil(data.totalNews/2);
           setTotalPages(pageCount);

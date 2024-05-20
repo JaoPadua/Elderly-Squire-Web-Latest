@@ -109,7 +109,7 @@ const changePage = (selectedPage) => {
 
   //delete Elders
   const handleSnackbarOpen = (message) => {
-    console.log('Opening Snackbar with message:', message);
+    //console.log('Opening Snackbar with message:', message);
     setSnackbarMessage(message);
     setSnackbarOpen(true);
   };

@@ -54,7 +54,7 @@ import Swal from 'sweetalert2';
 
   useEffect(() => {
     fetchElders(currentPage)
-    console.log(currentPage)
+    //console.log(currentPage)
   },[currentPage,searchQuery])
 
   const fetchElders = async(page) =>{
@@ -72,11 +72,11 @@ import Swal from 'sweetalert2';
      const data = await res.json()
      
       setElders(data.elders);
-      console.log('elder',data);
+      //console.log('elder',data);
       //console.log('data',data.elders)
       const pageCount = Math.ceil(data.totalElders/10);
       setTotalPages(pageCount);
-      console.log('ImportElders', data.elders);
+      //console.log('ImportElders', data.elders);
       //console.log('setImportElders', elders);
       //console.log('fetchTotalPages',data.totalPages)
     } catch (error) {
@@ -99,7 +99,7 @@ const handleFileChange = (e) => {
     const parsedData = XLSX.utils.sheet_to_json(worksheet, { header: 1, raw: true, defval: '' });
     
     // Log the raw parsed data
-    console.log('Raw Parsed Data:', parsedData);
+    //console.log('Raw Parsed Data:', parsedData);
     
     // Preserve leading zeros by converting each cell to string
     const parsedDataWithLeadingZeros = parsedData.map(row => row.map(cell => String(cell)));
@@ -151,7 +151,7 @@ const handleUpload = () => {
               title: "Import Data Success",
               icon: "success"
             });
-            console.log('data',result)
+            //console.log('data',result)
             setFile(null)
             fetchElders(currentPage)
             //console.log(result);

@@ -40,12 +40,12 @@ function AddDocumentsModals({setOpenModal}) {
       let cloudName = "dqs4lb8kt";
 
     const response = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,formData)
-    console.log('data',response); // Logging the response for debugging purposes
-    console.log('data response', response.data)
+    //console.log('data',response); // Logging the response for debugging purposes
+    ///console.log('data response', response.data)
     setpdfDocuments (response.data.secure_url);
     //console.log(setPdfDocs)
   } catch (error) {
-      console.log(error);
+      //console.log(error);
       throw new Error('Failed to upload file to Cloudinary');
   }
   };
@@ -87,7 +87,7 @@ function AddDocumentsModals({setOpenModal}) {
               setOpenModal(false)
               //console.log("formdata", formData);
                //console.log('Response Data:', responseData);
-              console.log('response',response);
+              //console.log('response',response);
 
             } else {    
 
@@ -95,7 +95,7 @@ function AddDocumentsModals({setOpenModal}) {
                 title: "Add Documents Error",
                 icon: "error"
               });
-              console.log(response);
+              //console.log(response);
             }
           
     
@@ -112,8 +112,8 @@ function AddDocumentsModals({setOpenModal}) {
             icon: "warning"
           });
           console.log("error",error)
-         console.log('Server responded with:', error.response.data);
-            console.log('Status code:', error.response.status);
+        console.log('Server responded with:', error.response.data);
+          console.log('Status code:', error.response.status);
             
       }
       

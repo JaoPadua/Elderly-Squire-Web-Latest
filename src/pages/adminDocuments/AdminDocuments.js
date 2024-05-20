@@ -85,7 +85,7 @@ const showPdf = (pdfUrl)=>{
 }
 
 const handleSnackbarOpen = (message) => {
-  console.log('Opening Snackbar with message:', message);
+  //console.log('Opening Snackbar with message:', message);
   setSnackbarMessage(message);
   setSnackbarOpen(true);
 };
@@ -135,7 +135,7 @@ const handleSnackbarClose = (event, reason) => {
   const dialogOpen = (documentID) => {
     setOpen(true);
     setDocumentsIDtoDelete(documentID)
-    console.log('id',documentID)
+    //console.log('id',documentID)
     
   };
   

@@ -41,7 +41,7 @@ function Login() {
     await login(email, password)
     
     /*if(!error){
-    console.log(error)
+    //console.log(error)
     Navigate('/admin') // if its not error go to login else dislpay the error
     }*/
     

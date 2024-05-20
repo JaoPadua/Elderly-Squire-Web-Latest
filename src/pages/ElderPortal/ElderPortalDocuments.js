@@ -36,7 +36,7 @@ function ElderPortalDocuments() {
       
           if(data && res.ok){
             setDocsData(data)
-           console.log('data',data)
+           //console.log('data',data)
           }
         }
       

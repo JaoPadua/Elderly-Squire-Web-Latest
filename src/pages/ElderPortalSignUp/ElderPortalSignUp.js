@@ -96,7 +96,7 @@ import { useNavigate } from 'react-router-dom';
                 icon: "success"
 
               })
-              console.log('Data',response)
+              //console.log('Data',response)
               reset()
               navigate('/ElderPortalLogin')
             }

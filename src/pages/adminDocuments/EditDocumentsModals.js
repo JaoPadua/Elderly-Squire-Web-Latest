@@ -62,8 +62,8 @@ function EditDocumentsModals ({setOpenEditModal, docsID}){
           let cloudName = "dqs4lb8kt";
     
         const response = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,formData)
-        console.log('data',response); // Logging the response for debugging purposes
-        console.log('data response', response.data)
+        //console.log('data',response); // Logging the response for debugging purposes
+        //console.log('data response', response.data)
         setSelectedPDF (response.data.secure_url);
         //console.log(setPdfDocs)
       } catch (error) {
@@ -85,7 +85,7 @@ function EditDocumentsModals ({setOpenEditModal, docsID}){
       formData.append('descriptions', editedDescription);
       formData.append('pdfDocuments', selectedPDF);
         
-      console.log('pdf',selectedPDF)
+      //console.log('pdf',selectedPDF)
         
 
       try {
@@ -114,8 +114,8 @@ function EditDocumentsModals ({setOpenEditModal, docsID}){
                 title: "Update documents error",
                 icon: "error"
               });
-            console.log('formdata',formData)
-            console.log(response);
+            //console.log('formdata',formData)
+            //console.log(response);
           }
       } catch (error) {
         if (error.response) {

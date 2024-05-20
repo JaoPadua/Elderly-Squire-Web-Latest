@@ -50,7 +50,7 @@ function Logs() {
       }
       const data = await response.json();
       setLogs(data.logs);
-      console.log('data',data.logs)
+      //console.log('data',data.logs)
       const pageCount = Math.ceil(data.totalLogs /10);
       setPageCount(pageCount);
     } catch (error) {
@@ -95,7 +95,7 @@ function Logs() {
           'Authorization': `Bearer ${user.token}`,
         }
       });
-      console.log('logs',logsID)
+      //console.log('logs',logsID)
       if(!response.ok){
         throw new Error('Failed to delete logs');
       }

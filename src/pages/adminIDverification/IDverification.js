@@ -106,7 +106,7 @@ function IDverification()  {
            throw new Error('Failed to fetch data');      
          }
          const data = await res.json();
-        console.log('fetchData' ,data);
+        //console.log('fetchData' ,data);
          setUsers(data.users);
          const totalPages = Math.ceil(data.totalUsers /10);
          //console.log('setUsers',data.users)
@@ -317,7 +317,7 @@ function IDverification()  {
       setBulkSMSPopUp(userID)
       setOpenBulkSMS(true);
       // Here, you can access the array of selected user IDs in the selectedRows state
-      console.log("Selected User IDs:", selectedRows);
+      //console.log("Selected User IDs:", selectedRows);
     };
 
     const sendSMSbulk = async(selectedRows,messageText) =>{
@@ -338,7 +338,7 @@ function IDverification()  {
             title: "SMS Bulk sent Success",
             icon: "success"
           });
-          console.log('response',res)
+          //console.log('response',res)
           setOpenBulkSMS(false)
           setMessageText('')
           setSelectedRows('')

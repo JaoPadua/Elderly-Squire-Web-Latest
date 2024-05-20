@@ -19,15 +19,15 @@ const Chatbotify = () => {
   }, []);
 
   const helpOptions = [
-    "What age i can get a senior ID?",
-    "What are the requirements for Applying to Senior Citizen ID",
-    "How to Apply for Senior ID application",
-    "What would i do after registrations success?",
+    "What age can I apply for a senior ID?",
+    "What are the requirements to prepare for Applying a Senior Citizen ID?",
+    "How to Apply for a Senior ID application?",
+    "What would I do after registrations process succeeds?",
     "What are the accepted Valid ID's",
-    "What do to if i have ID from other city then i want to apply for city of manila",
-    "How can i Contact OSCA Manila?",
-    "What are the requirements if i'm a dual citizenship?",
-    "What this Documents",
+    "What do to if I have ID from a different city and I want to apply for the city of manila",
+    "How can I Contact OSCA Manila?",
+    "What are the requirements if I'm a dual citizenship?",
+    "What is this Documents tab?",
   ];
 
   const YesorNohelpOptions = [
@@ -77,7 +77,7 @@ const Chatbotify = () => {
         let response = "";
         switch (params.userInput) {
           case "What age i can get a senior ID?":
-            response = "People who are 60 years old and above can apply for a Senior Citizen ID.";
+            response = "For People who are 60 years old and above can apply for a Senior Citizen ID.";
             break;
           case "What are the requirements for Applying to Senior Citizen ID":
             response = `One valid ID, original and newly issued Barangay Certifications 
@@ -92,7 +92,7 @@ const Chatbotify = () => {
             response = "Wait for a text from OSCA after they have verified your registration.";
             break;
           case "What are the accepted Valid ID's":
-            response = "Accepted IDs include Voter's ID, Birth Certificate (PSA copy), UMID ID, SSS ID, Driver's License, Postal ID.";
+            response = "The Accepted IDs include Voter's ID, Birth Certificate (PSA copy), UMID ID, SSS ID, Driver's License, Postal ID, Barangay Certificate, Police Clearance, NBI Clearance, National ID.";
             break;
           case "What do to if i have ID from other city then i want to apply for city of manila":
             response = "Our ID registrations are only for incoming Senior Citizens of Manila. For concerns, contact OSCA.";

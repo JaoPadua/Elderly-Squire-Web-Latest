@@ -41,11 +41,11 @@ const  IdRegistration = () => {
 
   const schema = yup.object({
     SurName: yup.string().required('Last Name is Required')
-    .matches(/^[A-Za-z ]+$/, 'Last Name must contain only alphabetical characters and spaces'),
-FirstName: yup.string().required('First Name is Required')
-    .matches(/^[A-Za-z ]+$/, 'First Name must contain only alphabetical characters and spaces'),
+    .matches(/^[A-Za-z. ]+$/, 'Last Name accept only alphabetical characters,spaces and `.` '),
+    FirstName: yup.string().required('First Name is Required')
+    .matches(/^[A-Za-z. ]+$/, 'First Name accept only alphabetical characters,spaces and `.`'),
     MiddleName: yup.string().required('Middle Name is Required')
-    .matches(/^(?:[A-Za-z ]+|N\/A)$/, 'Middle Name must contain only alphabetical characters and spaces or "N/A"'),
+    .matches(/^(?:[A-Za-z. ]+|N\/A)$/, 'Middle Name accept only alphabetical characters,spaces and `.` or "N/A"'),
 
 
     Address: yup.string().required('Address is Required'),
@@ -106,14 +106,14 @@ FirstName: yup.string().required('First Name is Required')
     },
     resolver: yupResolver(schema)
   });
-  console.log('Errors',errors)
+  //console.log('Errors',errors)
 
   //calculate age based on birth of date
   const handleDateChange = (newDate) => {
     const DateOfBirth = new Date(newDate);
-    console.log("DateOfBirth:", DateOfBirth); // Log the date to check its value
+    //console.log("DateOfBirth:", DateOfBirth); // Log the date to check its value
     const formattedDate = DateOfBirth.toLocaleDateString('en-US');
-    console.log("Formatted Date:", formattedDate);
+    //console.log("Formatted Date:", formattedDate);
 
     //setValue("DateOfBirth", formattedDate);
 
@@ -137,10 +137,10 @@ FirstName: yup.string().required('First Name is Required')
         let cloudName = "dqs4lb8kt";
 
     const response = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,formData)
-    console.log(response); // Logging the response for debugging purposes
+    //console.log(response); // Logging the response for debugging purposes
     return response.data.secure_url;
     } catch (error) {
-        console.log(error);
+        //console.log(error);
         throw new Error('Failed to upload file to Cloudinary');
     }
 };
@@ -196,7 +196,7 @@ FirstName: yup.string().required('First Name is Required')
         setIsResetting(true)
         reset();
         //console.log("formdata", formData);
-        console.log(response);
+        //console.log(response);
       } else {
         Swal.fire({
           title:"Register Error!",

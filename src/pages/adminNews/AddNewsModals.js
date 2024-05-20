@@ -70,7 +70,7 @@ function AddNewsModals({setOpenModal}) {
 
         const json = await response.json();
 
-        console.log('Response:', json);  // Log the response
+        //console.log('Response:', json);  // Log the response
 
         if (!response.ok) {
         setError(json.error);
@@ -109,7 +109,7 @@ function AddNewsModals({setOpenModal}) {
             //console.log('Selected Image Data URL:', dataURL); // Add this line
             setSelectedImage(dataURL);
             const base64Image = reader.result;
-            console.log('Base64 image:', base64Image);
+            //console.log('Base64 image:', base64Image);
             // Now you can set the base64 image in state or use it as needed
           };
           reader.readAsDataURL(file);
