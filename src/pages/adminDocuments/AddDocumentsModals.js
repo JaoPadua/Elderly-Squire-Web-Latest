@@ -167,7 +167,7 @@ function AddDocumentsModals({setOpenModal}) {
               id="Add Documents"
               type="file"
               name="pdfDocuments"
-              accept=".pdf"
+              inputProps={{accept:"application/pdf"}}
               onChange={(e) => setpdfDocuments(e.target.files[0])}
               variant="outlined"
               inputRef={inputRef}
