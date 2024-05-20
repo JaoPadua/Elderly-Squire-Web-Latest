@@ -476,7 +476,7 @@ function IDverification()  {
       <td>{users.Address}</td>
       <td>{users.Gender}</td>
 
-      <td>{users.YrsofResidenceInManila} Year/Years</td>
+      <td>{users.YrsofResidenceInManila}</td>
       <td>{users.BirthPlace}</td>
       <td>
        {users.DateOfBirth

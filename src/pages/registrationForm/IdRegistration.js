@@ -53,7 +53,10 @@ const  IdRegistration = () => {
     .string()
     .required('Nationality is Required')
     .matches(/^[A-Za-z]+(\/[A-Za-z]+)?$/,'Invalid format. For dual nationality, separate with a `/`.'),
-    YrsofResidenceInManila: yup.string().required('Years of Residence is Required'),
+    YrsofResidenceInManila: yup.string()
+    .required('Months/Years of Residence is Required')
+    .matches(/^(?=.*(?:months|years)).*$/, 'Please include "months" or "years" in the input'),
+
     Gender: yup.string().required('Gender is Required'),
     BirthPlace: yup.string().required('Birthplace is Required'),
     DateOfBirth: yup.date()
@@ -268,8 +271,8 @@ const  IdRegistration = () => {
             <SelectCivilStatus control={control} errors={errors} name="CivilStatus" label="Civil Status" />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <TextFields control={control} errors={errors} name="YrsofResidenceInManila"  required label="Years of Residency"  inputProps={{
-              type: 'number'
+            <TextFields control={control} errors={errors} name="YrsofResidenceInManila"  required label="Months/Years of Residence"  inputProps={{
+              type: 'text'
             }}/>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
