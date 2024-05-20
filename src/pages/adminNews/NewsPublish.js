@@ -398,7 +398,7 @@ const changePage = (selectedPage) => {
           inputComponent: 'input',
           inputProps: {
             type: 'file',
-            accept: 'image/*',
+            accept: '.jpg, .jpeg, .png',
             onChange: handleImageUpload,
           },
         }}

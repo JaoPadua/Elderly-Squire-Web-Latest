@@ -241,7 +241,7 @@ const handleUpload = () => {
         </div>
         <br></br>
       <div className='importtitle'>
-      <input type="file" onChange={handleFileChange} />
+      <input type="file" accept=".xlsx, .csv" onChange={handleFileChange} />
       <Button variant='contained' className='uploadButton' onClick={handleUpload}>Upload</Button>
       </div>
       <div className='table-wrapper'>

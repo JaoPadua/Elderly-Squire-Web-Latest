@@ -153,7 +153,7 @@ function EditNewsModals({ setOpenModal, newsId, setShowAddFormss }) {
                                     margin="normal"
                                 />
                                <input
-                                accept="image/*"
+                                accept=".jpg, .jpeg, .png,"
                                 type="file"
                                 onChange={handleImageUpload}
                                 style={{ display: 'block', marginTop: '16px' }} // Adjusted display and added marginTop

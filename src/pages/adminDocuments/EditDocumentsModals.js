@@ -183,7 +183,7 @@ function EditDocumentsModals ({setOpenEditModal, docsID}){
                             id="Add Documents"
                             type="file"
                             name="pdfDocuments"
-                            accept="application/pdf"
+                            accept=".pdf"
                             onChange={(e) => setSelectedPDF(e.target.files[0])}
                             variant="outlined"
                             //inputRef={inputRef}
