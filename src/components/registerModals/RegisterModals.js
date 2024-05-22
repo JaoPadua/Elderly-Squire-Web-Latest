@@ -9,7 +9,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 
 
-function RegisterModals({setOpenModal}) {
+function RegisterModals({setOpenModal,onSuccess}) {
   const [firstName,setFirstName] = useState("")
   const [lastName,setLastName] = useState("")
   const [email, setEmail] = useState("")
@@ -82,6 +82,7 @@ const handleSubmit = async (e) => {
         text: 'Add Admin Success',
         icon: 'success',
       });
+      onSuccess();
     }
   } catch (error) {
     // Network error or other unexpected errors

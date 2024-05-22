@@ -93,6 +93,10 @@ function AddAdmin() {
         setOpen(false);
       };
 
+      const handleAdminAdded = () => {
+        fetchAdmin();
+    };
+
   return (
     <div className='admin'>
     <AdminSidebar/>
@@ -200,7 +204,7 @@ function AddAdmin() {
         </div>
     </div>
 
-    {modalOpen && <RegisterModals setOpenModal={setModalOpen}/>}
+    {modalOpen && <RegisterModals setOpenModal={setModalOpen} onSuccess={handleAdminAdded}/>}
     </div>
    
   )
