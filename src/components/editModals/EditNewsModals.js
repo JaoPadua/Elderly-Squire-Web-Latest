@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 
 
 
-function EditNewsModals({ setOpenModal, newsId, setShowAddFormss }) {
+function EditNewsModals({ setOpenModal, newsId, setShowAddFormss,onSuccess }) {
     const { user } = useAuthContext();
     const [news, setNews] = useState({}); // Initialize news as an object
     const [editedTitle, setEditedTitle] = useState('');
@@ -78,7 +78,7 @@ function EditNewsModals({ setOpenModal, newsId, setShowAddFormss }) {
               //window.location.reload('/PublishNews');
               setOpenModal(false);
               setShowAddFormss(true);
-              
+              onSuccess();
               
           } else {
             Swal.fire({

@@ -8,7 +8,7 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 import Swal from 'sweetalert2'
 
 
-function AddDocumentsModals({setOpenModal}) {
+function AddDocumentsModals({setOpenModal,onSuccess}) {
 
   const inputRef = useRef(null);
   const [title,setTitle] = useState("")
@@ -88,7 +88,7 @@ function AddDocumentsModals({setOpenModal}) {
               //console.log("formdata", formData);
                //console.log('Response Data:', responseData);
               //console.log('response',response);
-
+              onSuccess();
             } else {    
 
               Swal.fire({

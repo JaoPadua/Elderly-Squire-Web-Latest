@@ -231,7 +231,10 @@ const changePage = (selectedPage) => {
         // Other necessary logic for modal closure
       };
       
-
+      const handleEditNewsAdded = () => {
+        fetchPaginatedNews(currentPage);
+      };
+    
   
   return (
     <div className='admin'>
@@ -434,7 +437,7 @@ const changePage = (selectedPage) => {
     
     </div>
    </div>
-   {modalOpen && <EditNewsModals setOpenModal={setModalOpen} newsId={newsIDtoView} setShowAddFormss={setShowAddForms}/>}
+   {modalOpen && <EditNewsModals setOpenModal={setModalOpen} newsId={newsIDtoView} setShowAddFormss={setShowAddForms} onSuccess={handleEditNewsAdded}/>}
     </div>
    
   )

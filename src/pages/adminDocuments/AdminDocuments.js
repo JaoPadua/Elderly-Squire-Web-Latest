@@ -144,6 +144,14 @@ const handleSnackbarClose = (event, reason) => {
   };
 
 
+  const handleAddDocumentsAdded = () => {
+    fetchDocuments(currentPage)
+};
+
+const handleEditDocumentsAdded = () => {
+  fetchDocuments(currentPage)
+};
+
   return (
     <div className='admin'>
 
@@ -260,8 +268,8 @@ const handleSnackbarClose = (event, reason) => {
           </div>
 
             </div>
-            {modalOpen ? <AddDocuments setOpenModal={setModalOpen}/> : null}
-          {editmodalOpen ? <EditDocumentsModals  docsID={docsIDtoEdit} setOpenEditModal={setEditModalOpen}/> : null}
+            {modalOpen ? <AddDocuments setOpenModal={setModalOpen} onSuccess={handleAddDocumentsAdded}/> : null}
+          {editmodalOpen ? <EditDocumentsModals  docsID={docsIDtoEdit} setOpenEditModal={setEditModalOpen} onSuccess={handleEditDocumentsAdded}/> : null}
     </div>
   )
 }

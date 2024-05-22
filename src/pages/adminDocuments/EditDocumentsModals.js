@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 
 
-function EditDocumentsModals ({setOpenEditModal, docsID}){
+function EditDocumentsModals ({setOpenEditModal, docsID,onSuccess}){
 
 
 
@@ -107,7 +107,7 @@ function EditDocumentsModals ({setOpenEditModal, docsID}){
                 icon: "success"
               });
               setOpenEditModal(false);
-              
+              onSuccess();
               
           } else {
             Swal.fire({
@@ -133,6 +133,8 @@ function EditDocumentsModals ({setOpenEditModal, docsID}){
       }
   };
   
+ 
+
 
     return (
         <div className="modalBackground">

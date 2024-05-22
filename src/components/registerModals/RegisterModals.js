@@ -82,6 +82,7 @@ const handleSubmit = async (e) => {
         text: 'Add Admin Success',
         icon: 'success',
       });
+      setOpenModal(false);
       onSuccess();
     }
   } catch (error) {

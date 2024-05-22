@@ -224,6 +224,9 @@ const handleUpload = () => {
       setOpen(false);
     };
 
+    const handleEditDataAdded = () => {
+      fetchElders(currentPage)
+  };
 
 
     return (
@@ -380,7 +383,7 @@ const handleUpload = () => {
         />
     </div>
       </div>
-      {modalOpen && <EditImportModals setOpenModal={setModalOpen} elderID={elderIDtoView}/>}
+      {modalOpen && <EditImportModals setOpenModal={setModalOpen} elderID={elderIDtoView} onSuccess={handleEditDataAdded}/>}
       </div>
     )
   }

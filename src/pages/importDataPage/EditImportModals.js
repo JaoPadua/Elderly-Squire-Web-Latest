@@ -4,7 +4,7 @@ import { useState,useEffect } from "react"
 import { useAuthContext } from "../../hooks/useAuthContext";
 import Swal from 'sweetalert2';
 
-function EditImportModals({setOpenModal, elderID}) {
+function EditImportModals({setOpenModal, elderID,onSuccess}) {
     
     
   const { user } = useAuthContext(); 
@@ -87,11 +87,12 @@ function EditImportModals({setOpenModal, elderID}) {
     
           } else{
             //console.log('Elder Status Update', json)
-            setOpenModal(false);
             Swal.fire({
               title: "Update Success",
               icon: "success"
             });
+            setOpenModal(false);
+            onSuccess();
           }
           
     
