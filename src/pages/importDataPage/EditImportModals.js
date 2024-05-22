@@ -124,7 +124,7 @@ function EditImportModals({setOpenModal, elderID,onSuccess}) {
                 <TextField
                   autoComplete="given-name"
                   name="firstName"
-                  disabled
+
                   required
                   variant="outlined"
                   fullWidth
@@ -141,7 +141,6 @@ function EditImportModals({setOpenModal, elderID,onSuccess}) {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  disabled
                   variant="outlined"
                   id="MiddleName"
                   label="Middle Name"
@@ -156,7 +155,6 @@ function EditImportModals({setOpenModal, elderID,onSuccess}) {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  disabled
                   fullWidth
                   variant="outlined"
                   id="LastName"
@@ -173,7 +171,6 @@ function EditImportModals({setOpenModal, elderID,onSuccess}) {
               <Grid item xs={12}>
                 <TextField
                   variant="outlined"
-                  disabled
                   fullWidth
                   name="Suffix"
                   label="Suffix"
