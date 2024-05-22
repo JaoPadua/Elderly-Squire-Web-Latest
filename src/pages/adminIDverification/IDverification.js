@@ -449,7 +449,7 @@ function IDverification()  {
       <th>Contact</th>
       <th>Address</th>
       <th>Gender</th>
-      <th>Years of Residence in Manila</th>
+      <th>Months/Years of Residence in Manila</th>
       <th>BirthPlace</th>
       <th>Date of Birth</th>
       <th>Details</th>

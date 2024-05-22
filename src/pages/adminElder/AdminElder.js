@@ -199,7 +199,7 @@ const changePage = (selectedPage) => {
       <th>MiddleName</th>
       <th>Suffix</th>
       <th>Address</th>
-      <th>YrsofResidenceInManila</th>
+      <th>Months/Years of Residence in Manila</th>
       <th>DateofBirth</th>
       <th>Gender </th>
       <th>Age </th>

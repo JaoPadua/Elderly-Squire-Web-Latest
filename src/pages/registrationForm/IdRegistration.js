@@ -54,8 +54,7 @@ const  IdRegistration = () => {
     .required('Nationality is Required')
     .matches(/^[A-Za-z]+(\/[A-Za-z]+)?$/,'Invalid format. For dual nationality, separate with a `/`.'),
     YrsofResidenceInManila: yup.string()
-    .required('Months/Years of Residence is Required')
-    .matches(/^(?=.*(?:months|years)).*$/, 'Please include "months" or "years" in the input'),
+    .required('Months/Years of Residence is Required'),
 
     Gender: yup.string().required('Gender is Required'),
     BirthPlace: yup.string().required('Birthplace is Required'),
