@@ -167,7 +167,7 @@ function AdminDashboard() {
                 labels: districtData.labels,
                 datasets: [
                   {
-                    label: '',
+                    label: 'Total Elders',
                     data: districtData.data,
                     backgroundColor: [
                       'rgba(52, 152, 219, 0.7)', // Blue with 70% opacity

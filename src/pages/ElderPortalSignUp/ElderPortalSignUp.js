@@ -44,12 +44,12 @@ import { useNavigate } from 'react-router-dom';
       SurName: yup
       .string()
       .required('Last Name is Required')
-      .matches(/^[A-Za-z]+$/, 'Last Name must contain only alphabetical characters'),
+      .matches(/^[A-Za-z. ]+$/, 'Last Name accept only alphabetical characters,spaces and `.` '),
       
     FirstName: yup
       .string()
       .required('First Name is Required')
-      .matches(/^[A-Za-z]+$/, 'First Name must contain only alphabetical characters'),
+      .matches(/^[A-Za-z. ]+$/, 'First Name accept only alphabetical characters,spaces and `.`'),
      
     //MiddleName: yup.string().required('MiddleName is Required').matches(/^[A-Za-z]+$/, 'FirstName must contain only alphabetical characters'),
     email: yup.string().required('E-mail Address is required.').email('E-mail Address provided is invalid.').max(320),

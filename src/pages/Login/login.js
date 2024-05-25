@@ -1,6 +1,4 @@
-import { TextField,Button,IconButton,CloseIcon,InputAdornment } from '@mui/material';
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+import { TextField,Button,IconButton,InputAdornment } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -12,7 +10,6 @@ import oscaManilaImage from "../img/oscamanila.png";
 import { useState,useEffect  } from "react"
 import { useLogin } from "../../hooks/useLogin";
 import './login.css'
-import { useNavigate } from "react-router-dom";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
@@ -39,11 +36,6 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await login(email, password)
-    
-    /*if(!error){
-    //console.log(error)
-    Navigate('/admin') // if its not error go to login else dislpay the error
-    }*/
     
   };
     

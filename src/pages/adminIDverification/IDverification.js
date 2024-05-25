@@ -114,18 +114,6 @@ function IDverification()  {
        } 
 
   //deleteUsers
-  const handleSnackbarOpen = (message) => {
-    setSnackbarMessage(message);
-    setSnackbarOpen(true);
-  };
-  
-  const handleSnackbarClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-    setSnackbarOpen(false);
-  };
-  
   const deleteUser = async (userID) => {
     try {
       const response = await fetch(`https://capstone-project-api-backend.vercel.app/api/usersRoute/${userID}`, {
@@ -579,20 +567,6 @@ function IDverification()  {
                 </DialogActions>
             </DialogContent>
           </Dialog>
-          <Snackbar
-              open={snackbarOpen}
-              autoHideDuration={6000}
-              onClose={handleSnackbarClose}
-            >
-                <MuiAlert
-                  elevation={6}
-                  variant="filled"
-                  onClose={handleSnackbarClose}
-                  severity="success"  // Change the severity based on your use case
-                >
-                  {snackbarMessage}
-                </MuiAlert>
-              </Snackbar>
           </span>
          </td>
          <td>

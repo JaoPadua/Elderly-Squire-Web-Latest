@@ -76,31 +76,31 @@ const Chatbotify = () => {
       path: async (params) => {
         let response = "";
         switch (params.userInput) {
-          case "What age i can get a senior ID?":
+          case "What age can I apply for a senior ID?":
             response = "For People who are 60 years old and above can apply for a Senior Citizen ID.";
             break;
-          case "What are the requirements for Applying to Senior Citizen ID":
+          case "What are the requirements to prepare for Applying a Senior Citizen ID?":
             response = `One valid ID, original and newly issued Barangay Certifications 
             (for Senior Citizen Application)
             and residence in Manila City for more than 6 months are required. Must be 60 years old and above. 
             Also Naturalizations Papers/Dual Citizenship Certificate(For Dual Citizenship only) `;
             break;
-          case "How to Apply for Senior ID application":
+          case "How to Apply for a Senior ID application?":
             response = "To apply, please fill up the Senior ID application form available on our website.";
             break;
-          case "What would i do after registrations success?":
+          case "What would I do after registrations process succeeds?":
             response = "Wait for a text from OSCA after they have verified your registration.";
             break;
           case "What are the accepted Valid ID's":
             response = "The Accepted IDs include Voter's ID, Birth Certificate (PSA copy), UMID ID, SSS ID, Driver's License, Postal ID, Barangay Certificate, Police Clearance, NBI Clearance, National ID.";
             break;
-          case "What do to if i have ID from other city then i want to apply for city of manila":
+          case "What do to if I have ID from a different city and I want to apply for the city of manila":
             response = "Our ID registrations are only for incoming Senior Citizens of Manila. For concerns, contact OSCA.";
             break;
-          case "How can i Contact OSCA Manila?":
+          case "How can I Contact OSCA Manila?":
             response = "Contact OSCA via their FB page, email at oscamanila@manila.gov.ph, or phone at (02) 8-571-3878 / 5-310-3371 / 5-310-3372.";
             break;
-          case "What this Documents":
+          case "What is this Documents tab?":
             response = "The Document Page is where you can find forms to fill up depending on your needs, like a form for a lost ID.";
             break;
           default:
