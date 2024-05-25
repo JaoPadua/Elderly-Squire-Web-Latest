@@ -26,13 +26,12 @@ const Chatbotify = () => {
     "What are the accepted Valid ID's",
     "What do to if I have ID from a different city and I want to apply for the city of manila",
     "How can I Contact OSCA Manila?",
-    "What are the requirements if I'm a dual citizenship?",
     "What is this Documents tab?",
   ];
 
   const YesorNohelpOptions = [
-  "YES",
-  "NO",
+    "YES",
+    "NO",
   ];
 
   const flow = {
@@ -50,7 +49,7 @@ const Chatbotify = () => {
       transition: { duration: 1000 },
       chatDisabled: true,
       path: async (params) => {
-        
+
         if (params.userInput === "YES") {
           // If the user clicks 'Yes', proceed to display the help options.
           return "show_help_options";
@@ -121,7 +120,7 @@ const Chatbotify = () => {
       path: "process_options",
     },
   };
-  
+
   const defaultOptions = {
     theme: {
       primaryColor: "#42b0c5",
@@ -141,21 +140,22 @@ const Chatbotify = () => {
     },
     chatButton: {
       icon: botAvatar,
-  },
+    },
     header: {
       title: (
         <h3 className="chatbot-title"
-          style={{ cursor: "pointer", color: "white", // Set text color to white
-          fontSize: "18px", // Text size
-          fontWeight: "bold", // Text weight
-            }}
+          style={{
+            cursor: "pointer", color: "white", // Set text color to white
+            fontSize: "18px", // Text size
+            fontWeight: "bold", // Text weight
+          }}
           onClick={() => window.open("https://www.facebook.com/ManilaOSCA/")}
         >
           LOLO Bot
         </h3>
       ),
       showAvatar: true,
-    avatar: botAvatar2,
+      avatar: botAvatar2,
     },
     notification: {
       disabled: false,
