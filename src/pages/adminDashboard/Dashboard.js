@@ -107,7 +107,7 @@ function AdminDashboard() {
         }
   
         const data = await res.json();
-        //console.log('importData',data)
+        console.log('importData',data)
 
         if (!Array.isArray(data) || data.length === 0) {
           throw new Error("Data is not in the expected format or is empty");
@@ -138,7 +138,6 @@ function AdminDashboard() {
   
     fetchImportData();
   }, []);
-  
 
   return (
     <div className="admin-dashboard">
