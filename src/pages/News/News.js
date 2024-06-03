@@ -28,8 +28,8 @@ function News() {
         <div className='cards'>
             <h1>Elderly Squire News</h1>
 
-            <div className='cards__wrapper__news'>
-                <ul className='cards__items__news'>
+            <div className='cards__wrapper'>
+                <ul className='cards__items'>
                 {newsData && newsData.slice(0,4).map((newsItem) => (
                     <CardItemB
                       key={newsItem._id}
