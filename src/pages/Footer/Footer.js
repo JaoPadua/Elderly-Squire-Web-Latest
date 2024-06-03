@@ -9,91 +9,46 @@ import {
   FaLinkedin
 } from 'react-icons/fa';
 
+import { MdPerson, MdPhone, MdEmail,MdLocationOn } from "react-icons/md";
+
+
+
 function Footer() {
   return (
     <div className='footer-container'>
+     <div className='footer-logo'>
+              Elderly Squire
+              <span>A Capstone Project of Students from CCIT National University Manila</span>
+          </div>
       <div className='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Terms and Condition</Link>
-            <Link to='/'>Blog</Link>
-            <Link to='/'>Privace Policy</Link>
-          </div>
-          <div className='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
-          </div>
+      <div className='footer-link-items'>
+        <h2>Contact Us</h2>
+        <div className='contact-detail'>
+          <MdPerson /><span>Ms. Elinor Jacinto - Officer-In-Charge</span>
         </div>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
-          </div>
+        <div className='contact-detail'>
+          <MdLocationOn /><span>Rm. 115 Ground Floor, Manila City Hall Building</span>
+        </div>
+        <div className='contact-detail'>
+          <MdPhone /><span>(02) 8-571-3878 / 5-310-3371 / 5-310-3372</span>
+        </div>
+        <div className='contact-detail'>
+          <MdEmail /><span>osca@manila.gov.ph</span>
+        </div>
+        <div className='contact-detail'>
+        <Link
+          to='https://www.facebook.com/ManilaOSCA/'
+          target='_blank'
+          aria-label='Facebook'
+          className='facebook-link'
+        >
+          <FaFacebook /><span>Facebook Page</span>
+        </Link>
         </div>
       </div>
-      <section className='social-media'>
-        <div className='social-media-wrap'>
-          <div className='footer-logo'>
-            <Link to='/' className='social-logo'>
-              Elderly Squire
-            </Link>
-          </div>
-          <small className='website-rights'>Elderly Squire © 2022</small>
-          <div className='social-icons'>
-            <Link
-              className='social-icon-link'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <FaFacebook />
-            </Link>
-            <Link
-              className='social-icon-link'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <FaInstagram />
-            </Link>
-            <Link
-              className='social-icon-link'
-              to={
-                '/'
-              }
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <FaYoutube />
-            </Link>
-            <Link
-              className='social-icon-link'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <FaTwitter />
-            </Link>
-            <Link
-              className='social-icon-link'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <FaLinkedin />
-            </Link>
-          </div>
+
+      </div>
         </div>
-      </section>
-    </div>
   );
 }
 
