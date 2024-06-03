@@ -18,7 +18,7 @@ function Home() {
             <PageOne {...homeObjThree} />   
             <PageTwo />
             <AboutUs />
-            <AppFaq />
+            {/*<AppFaq />*/}
             <PageOne {...homeObjFour} />
             <Footer />
         </>

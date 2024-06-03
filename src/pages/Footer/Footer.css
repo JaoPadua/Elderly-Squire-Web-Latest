@@ -1,6 +1,5 @@
 .footer-container {
-  background-color: #1c2237; /* Teal background color */
-  padding: 2rem 0;
+  background-color: #1c2237;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -53,13 +52,20 @@
   margin-bottom: 0.5rem;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px; 
+}
+
+
 .contact-detail svg {
   font-size: 1.5rem;
-  margin-right: 8px; /* Adjusts the space between the icon and the text */
+  margin-right: 8px; 
 }
 
 .contact-detail span {
-  flex: 1; /* Makes the span take the remaining space */
+  flex: 1; 
   color: #fff;
 }
 
@@ -85,6 +91,18 @@
   .footer-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .footer-logo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo span{
+    display: block;
   }
 
   .footer-link-items {

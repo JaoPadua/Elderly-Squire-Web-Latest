@@ -23,6 +23,7 @@ function Footer() {
       <div className='footer-links'>
       <div className='footer-link-items'>
         <h2>Contact Us</h2>
+        <div className='contact-grid'>
         <div className='contact-detail'>
           <MdPerson /><span>Ms. Elinor Jacinto - Officer-In-Charge</span>
         </div>
@@ -46,7 +47,7 @@ function Footer() {
         </Link>
         </div>
       </div>
-
+</div>
       </div>
         </div>
   );
