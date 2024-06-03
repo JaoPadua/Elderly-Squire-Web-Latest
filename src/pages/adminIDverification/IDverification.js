@@ -2,9 +2,7 @@ import './admin_IDVerifications.css'
 import AdminNavbar from '../../components/admin-navbar/AdminNavbar'
 import AdminSidebar from '../../components/admin_sidebar/AdminSidebar'
 import DeleteIcon from '@mui/icons-material/Delete';
-import CancelIcon from '@mui/icons-material/Cancel';
 import InfoIcon from '@mui/icons-material/Info';
-import SmsIcon from '@mui/icons-material/Sms';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import React from 'react'
@@ -17,9 +15,8 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from '@mui/material/Button'
-import MuiAlert from '@mui/material/Alert';
 import {format} from 'date-fns'
-import { Checkbox, Input, Snackbar } from '@mui/material';
+import { Checkbox, } from '@mui/material';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import Divider from '@mui/material/Divider';
 import { InputAdornment } from '@mui/material';
@@ -62,26 +59,12 @@ function IDverification()  {
   const [mobilePhoneSMS, setMobilePhoneSMS] = useState('');
 
   //search and paginations
-
   const [searchQuery, setSearchQuery] = useState("");
-  //const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages,setTotalPages] = useState(1); 
 
-
-  //snackBar
-  const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const [snackbarMessage, setSnackbarMessage] = useState('');
   const {user} = useAuthContext()
 
-
-
-  //paginations
-  /*const usersPerPage = 10;
-  const pagesVisited = pageNumber * usersPerPage;
-
-  
-  const pageCount = Math.ceil(users.length / usersPerPage);*/
 
   const changePage = (selectedPage) => {
     setCurrentPage(selectedPage.selected + 1);

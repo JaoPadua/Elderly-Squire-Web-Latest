@@ -1,5 +1,4 @@
 
-
 .cards {
   padding: 4rem;
   background: #fff;
@@ -108,11 +107,6 @@ h3 {
   overflow: hidden;
 }
 
-.fade-img {
-  animation-name: fade-img;
-  animation-duration: 2s;
-}
-
 .cards__item__pic-wrap::after {
   content: attr(data-category);
   position: absolute;
@@ -139,12 +133,10 @@ h3 {
   height: 100%;
   max-height: 100%;
   object-fit: contain;
-  transition: all 0.2s linear;
+
 }
 
-.cards__item__img:hover {
-  transform: scale(1.1);
-}
+
 
 .cards__item__info {
   padding: 20px 30px 30px;

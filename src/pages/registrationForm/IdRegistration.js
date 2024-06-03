@@ -1,6 +1,5 @@
 import React,{useState} from "react";
 import { Box, InputAdornment, Button} from "@mui/material";
-
 import HomeIcon from '@mui/icons-material/Home';
 import Typography from "@mui/material/Typography";
 import TextFields from "../../components/forms/TextFields";
@@ -31,10 +30,7 @@ const  IdRegistration = () => {
   const [isResetting, setIsResetting] = useState(false);
   
   const handleDateReset = () => {
-    // Your form submission logic
-    // After successful submission, set isResetting to true to trigger the reset
-    setIsResetting(true);
-    // Optionally, reset isResetting after a brief delay to allow the reset to take effect
+    setIsResetting(true); 
     setTimeout(() => setIsResetting(false), 100);
   };
 
@@ -113,11 +109,9 @@ const  IdRegistration = () => {
   //calculate age based on birth of date
   const handleDateChange = (newDate) => {
     const DateOfBirth = new Date(newDate);
-    //console.log("DateOfBirth:", DateOfBirth); // Log the date to check its value
     const formattedDate = DateOfBirth.toLocaleDateString('en-US');
     //console.log("Formatted Date:", formattedDate);
 
-    //setValue("DateOfBirth", formattedDate);
 
     const today = new Date();
     let calculatedAge = today.getFullYear() - DateOfBirth.getFullYear();
@@ -132,7 +126,7 @@ const  IdRegistration = () => {
   const uploadFile = async (files) => {
     //console.log(files)
     try {
-        //const upload_preset = "image_preset";
+    
         const formData = new FormData();
         formData.append('file', files[0]);
         formData.append('upload_preset', "cuuz8bg0");

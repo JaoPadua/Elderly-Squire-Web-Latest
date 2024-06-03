@@ -36,11 +36,6 @@ function PageOne({
                                 >
                                     {description}
                                 </p>
-                                <Link to='/'>
-                                    <Button buttonSize='btn--wide' buttonColor='primary'>
-                                        {buttonLabel}
-                                    </Button>
-                                </Link>
                             </div>
                         </div>
                         <div className='col'>
