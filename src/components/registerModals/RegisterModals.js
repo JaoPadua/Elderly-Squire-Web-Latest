@@ -32,6 +32,18 @@ function RegisterModals({setOpenModal,onSuccess}) {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
+
+  // Check for empty fields
+  if (!firstName || !lastName || !email || !password || !role) {
+    Swal.fire({
+      title: 'Incomplete Form',
+      text: 'Please fill in all the fields',
+      icon: 'warning',
+    });
+    return;
+  }
+
+
   const data = {
     firstName: firstName,
     lastName: lastName,
