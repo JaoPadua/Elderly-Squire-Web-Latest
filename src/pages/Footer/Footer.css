@@ -104,6 +104,12 @@
   .footer-logo span{
     display: block;
   }
+  
+  .contact-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px; 
+  }
 
   .footer-link-items {
     align-items: center;
