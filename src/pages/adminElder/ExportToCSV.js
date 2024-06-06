@@ -10,7 +10,7 @@ const ExportToCSV = ({ data }) => {
             'LAST NAME': 'LAST NAME',
             'FIRST NAME': 'FIRST NAME',
             'MIDDLE NAME': 'MIDDLE NAME',
-            'SUFFIX': 'Suffix',
+            'SUFFIX': 'SUFFIX',
             'Age': 'Age',
             'DateOfBirth': 'DateOfBirth',
             'MonthOfBirth': 'BIRTH MONTH',
