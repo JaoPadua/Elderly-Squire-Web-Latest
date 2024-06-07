@@ -241,7 +241,13 @@ const changePage = (selectedPage) => {
                className="delete-btn"
                 onClick={() => dialogOpen(elders._id)}
                 />
-          <Dialog open = {open} onClose={dialogClose}>
+          <Dialog open = {open} onClose={dialogClose} slotProps={{
+                backdrop: {
+                  style: {
+                backgroundColor: 'rgba(52, 52, 52, 0.1)',
+                      },
+                    },
+                  }}>
           <DialogTitle id="alert-dialog-title">
                 {"Confirm Deletion?"}
             </DialogTitle>
