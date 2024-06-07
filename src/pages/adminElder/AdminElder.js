@@ -180,7 +180,7 @@ const changePage = (selectedPage) => {
       <input
           className="search"
           placeholder="Search Elder..."
-          onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         </div>
          {/* Export button React to Excel*/ }

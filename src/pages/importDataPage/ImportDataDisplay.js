@@ -239,7 +239,7 @@ const handleUpload = () => {
           className="search"
           value={searchQuery}
           placeholder="Search Elder..."
-          onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         </div>
         <br></br>
