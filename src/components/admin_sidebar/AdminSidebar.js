@@ -27,7 +27,6 @@ function AdminSidebar(){
 
     const handleClick  =() =>{
         logout();
-        navigate('/LoginAdmin')
     }
 
 
