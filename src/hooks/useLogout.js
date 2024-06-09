@@ -41,7 +41,7 @@ export const useLogout= () =>{
                      timer: 1500
                      
                  });
-                 navigate('/loginDisplay');
+                 navigate('/loginadmin');
             }
             else {
                 Swal.fire({
