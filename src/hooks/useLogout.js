@@ -24,7 +24,8 @@ export const useLogout= () =>{
                 method: 'POST',
                 credentials: 'include', // Send cookies, required for session handling
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email })
+                body: JSON.stringify({ email }),
+               credentials: 'include',
             });
 
             if(response.ok){
@@ -41,7 +42,6 @@ export const useLogout= () =>{
                      timer: 1500
                      
                  });
-                 navigate('/loginadmin');
             }
             else {
                 Swal.fire({

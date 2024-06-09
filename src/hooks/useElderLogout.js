@@ -40,7 +40,6 @@ export const useElderLogout = () => {
                     timer: 1500
                     
                 });
-                navigate('/ElderPortalLogin');
             } else {
                 Swal.fire({
                     icon: 'error',
