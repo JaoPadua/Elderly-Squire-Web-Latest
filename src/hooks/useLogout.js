@@ -25,7 +25,7 @@ export const useLogout= () =>{
                 credentials: 'include', // Send cookies, required for session handling
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email }),
-               credentials: 'include',
+
             });
 
             if(response.ok){
