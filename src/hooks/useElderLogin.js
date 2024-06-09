@@ -17,39 +17,40 @@ export const useElderLogin = () => {
     setError(null)
 
 
-    //const authToken = localStorage.getItem('authToken');
- 
-        // Include the token in the headers
+   
 
 
-    const response = await fetch('https://capstone-project-api-backend.vercel.app/api/elderPortal/ElderLogin', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json', /*Authorization: `Bearer ${authToken}`*/},
-      body: JSON.stringify({ email, password})
-    })
-    const json = await response.json()
+    try {
+      const response = await fetch('https://capstone-project-api-backend.vercel.app/api/elderPortal/ElderLogin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+        credentials: 'include',
+      });
 
-    //console.log('json',json)
-    if (!response.ok) {
-      setError(json.error)
-      setIsLoading(false)
+      const json = await response.json();
+
+      if (response.ok) {
+        sessionStorage.setItem('elderUser', JSON.stringify(json));
+        dispatch({ type: 'ELDER_LOGIN', payload: json });
+        toast.success(`Welcome ${json.firstName}!`);
+      } else if (response.status === 403) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Multiple Login Detected',
+          text: 'You are already logged in from another session. Please log out from other sessions first.'
+        });
+      } else {
+        setError(json.error || 'Login failed');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
     }
-    if (response.ok) {
-      // save the user to local storage
-      sessionStorage.setItem('elderUser', JSON.stringify(json))
-      //console.log('Logged-in elderUser:', json.firstName, json.lastName);
-      //localStorage.setItem('role', json.role);
-      //console.log('role',json.role)
-      dispatch({type: 'ELDER_LOGIN', payload: json})
-      toast.success("Welcome " + json.firstName + "!");
-      // update loading state
-      setIsLoading(false)
-       // Display toast notification after successful login
-       
-     
-    }
-      
-    }
+  };
+
   
 
   return { elderLogin, isLoading, error }

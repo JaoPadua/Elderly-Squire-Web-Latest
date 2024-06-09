@@ -16,19 +16,41 @@ export const useLogin = () => {
     setError(null)
 
 
-    //const authToken = localStorage.getItem('authToken');
- 
-        // Include the token in the headers
-
-
+    try{
     const response = await fetch('https://capstone-project-api-backend.vercel.app/api/adminRoute/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json', /*Authorization: `Bearer ${authToken}`*/},
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ email, password }),
+      credentials: 'include',
     })
     const json = await response.json()
 
-    //console.log('json',json)
+
+    if (response.ok) {
+      sessionStorage.setItem('user', JSON.stringify(json));
+      dispatch({ type: 'LOGIN', payload: json });
+      toast.success(`Welcome ${json.firstName}!`);
+    } else if (response.status === 403) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Multiple Admin Login Detected',
+        text: 'You are already logged in from another session. Please log out from other sessions first.'
+      });
+    } else {
+      setError(json.error || 'Login failed');
+    }
+  } catch (error) {
+    console.error('Error during login:', error);
+    setError('Something went wrong. Please try again.');
+  } finally {
+    setIsLoading(false);
+  }
+};
+
+
+
+
+   /* //console.log('json',json)
     if (!response.ok) {
       setError(json.error)
       setIsLoading(false)
@@ -51,7 +73,7 @@ export const useLogin = () => {
 
       // update loading state
       setIsLoading(false)
-    }
+    }*/
   
 
   return { login, isLoading, error }
