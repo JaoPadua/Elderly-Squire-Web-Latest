@@ -14,7 +14,7 @@ export const useLogout= () =>{
 
             if (!adminUser) {
                 // If elderUser is not found in session storage, assume the user is already logged out
-                navigate('/loginDisplay');
+                navigate('/loginadmin');
                 return;
             }
 
