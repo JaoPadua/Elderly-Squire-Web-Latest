@@ -20,7 +20,7 @@ export const useLogout= () =>{
 
             const { email } = adminUser; // Extract email from admin object
 
-            const response = await fetch('https://capstone-project-api-backend.vercel.app/api/adminRoute/login', {
+            const response = await fetch('https://capstone-project-api-backend.vercel.app/api/adminRoute/logoutAdmin', {
                 method: 'POST',
                 credentials: 'include', // Send cookies, required for session handling
                 headers: { 'Content-Type': 'application/json' },
