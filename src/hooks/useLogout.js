@@ -14,7 +14,7 @@ export const useLogout= () =>{
 
             if (!adminUser) {
                 // If elderUser is not found in session storage, assume the user is already logged out
-                navigate('/loginadmin');
+                navigate('/loginAdmin');
                 return;
             }
 
@@ -42,7 +42,7 @@ export const useLogout= () =>{
                      timer: 1500
                      
                  });
-                 navigate('/loginadmin');
+                 navigate('/loginAdmin');
             }
             else {
                 Swal.fire({

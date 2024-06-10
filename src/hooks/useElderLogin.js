@@ -16,10 +16,6 @@ export const useElderLogin = () => {
     setIsLoading(true)
     setError(null)
 
-
-   
-
-
     try {
       const response = await fetch('https://capstone-project-api-backend.vercel.app/api/elderPortal/ElderLogin', {
         method: 'POST',

@@ -41,7 +41,6 @@ function ElderPortalNavbar() {
 
     const handleLogout  =() =>{
         elderLogout();
-        
     }
 
 
