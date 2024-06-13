@@ -21,7 +21,8 @@ export const useElderLogout = () => {
             const response = await fetch('https://capstone-project-api-backend.vercel.app/api/elderPortal/logout', {
                 method: 'POST',
                 credentials: 'include', // Send cookies, required for session handling
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json',
+                          'Access-Control-Allow-Origin': 'https://elderlysquire.online/',},
                 body: JSON.stringify({ email }),
             });
 
