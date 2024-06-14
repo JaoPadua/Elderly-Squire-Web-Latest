@@ -22,7 +22,7 @@ export const useElderLogout = () => {
                 method: 'POST',
                 credentials: 'include', // Send cookies, required for session handling
                 headers: { 'Content-Type': 'application/json',
-                          'Access-Control-Allow-Origin': '*',},
+                          'Access-Control-Allow-Origin': 'https://elderlysquire.online',},
                 body: JSON.stringify({ email }),
             });
 
