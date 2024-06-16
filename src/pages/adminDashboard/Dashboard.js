@@ -10,6 +10,10 @@ import { ToastContainer } from 'react-toastify';
 ChartJS.register(ArcElement, Tooltip, Legend,BarElement,CategoryScale,LinearScale);
 
 function AdminDashboard() {
+ const { user } = useAuthContext();
+
+
+  
   const [districtData, setDistrictData] = useState({
     labels: [],
     data: [],
@@ -26,7 +30,7 @@ function AdminDashboard() {
     totalCount: 0,
   })
 
-  const { user } = useAuthContext();
+ 
 
   useEffect(() => {
     const fetchData = async () => {
